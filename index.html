@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .top {
+        height: 45px;
+        padding: 0 auto;
+        font-size: 14px;
+        line-height: 45px;
+        background-color: #94070a;
+        overflow: hidden;
+    }
+
+    .block {
+        width: 1200px;
+        height: 45px;
+        margin: 0 auto;
+    }
+
+    .nav_l {
+        float: left;
+        padding: 0;
+    }
+
+
+    .nav_r {
+        float: right;
+    }
+
+
+    .nav_l a,
+    .nav_r a {
+        width: 32px;
+        height: 23px;
+        color: #d39797;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .nav_r a {
+        margin: 0px 0px 0px 30px;
+    }
+
+    .block a:hover {
+        border-top: 2px solid #fff;
+    }
+
+    .block i {
+        padding: 0 18px;
+        font-size: 12px;
+        font-style: normal;
+        color: #d39797;
+    }
+
+    .banner {
+        height: 600px;
+        box-shadow: inset 0px 50px 50px -45px #000,
+            inset 0px -50px 50px -45px #000;
+        background-image: url(imgs/s5fd02526a009d.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .header {
+        height: 85px;
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .logo {
+        height: 85px;
+        width: 200px;
+        display: block;
+        float: left;
+        background-image: url(imgs/s5e04147ee4a83.png);
+        background-repeat: no-repeat;
+        background-position: 0 15px;
+        background-size: contain;
+    }
+
+    .nav {
+        position: relative;
+        float: left;
+        margin-left: 50px;
+    }
+
+    .nav ul li {
+        float: left;
+    }
+
+    .nav ul li a {
+        display: block;
+        height: 35px;
+        margin: 25px 20px;
+        text-decoration: none;
+        line-height: 35px;
+        color: #fff;
+        font-size: 18px;
+        font-family: 'Microsoft YaHei';
+    }
+
+    .nav ul>a:hover {
+        border-bottom: 2px solid #94070a;
+    }
+
+    .item {
+        padding: 40px;
+        display: flex;
+        border-top: 2px solid #94070a;
+        position: absolute;
+        left: -250px;
+        top: 80px;
+        width: 900px;
+        background: #fff url(imgs/png96.png) center bottom no-repeat;
+        background-size: contain;
+        opacity: 1;
+        visibility: hidden;
+
+    }
+
+    .nav ul li:hover .item {
+        visibility: visible;
+    }
+
+    .txt {
+        flex: 0.9;
+        font-size: 16px;
+        color: #94070a;
+        padding-left: 30px;
+        line-height: 2.2;
+        text-align: left;
+    }
+
+    .itemr {
+        width: 495px;
+        height: 142px;
+        font-size: 0;
+        color: black;
+
+    }
+
+    .itemr .a {
+        width: 150px;
+        line-height: 29px;
+        float: left;
+        font-size: 18px;
+        display: block;
+        color: black;
+        padding: 0;
+        margin: 10px 0 0 0;
+    }
+
+    .itemr .a:hover {
+        color: #94070a;
+    }
+
+    .tools {
+        float: right;
+        width: 110px;
+        height: 35px;
+        padding: 25px 10px;
+    }
+
+    .tool {
+        float: left;
+        width: 32px;
+        height: 32px;
+        margin-right: 20px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        color: #fff;
+        text-align: center;
+        line-height: 32px;
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+        background-color: #eeebea;
+    }
+
+    .box {
+        width: 1200px;
+        margin: auto;
+        overflow: hidden;
+    }
+
+
+    .title {
+        float: left;
+        width: 1200px;
+        height: 100px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+        font-weight: normal;
+        font-size: 28px;
+        font-family: 'Microsoft YaHei';
+        line-height: 100px;
+    }
+
+    i {
+        font-style: normal;
+
+    }
+
+    .cent {
+        float: left;
+        width: 1200px;
+        height: 750px;
+        overflow: hidden;
+    }
+
+    .big,
+    .big2 {
+        width: 580px;
+        height: 330px;
+        margin: 10px;
+    }
+
+    .big {
+        float: left;
+        background-image: url(imgs/206f92c036f64ea484b1c6357010454f.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .big2 {
+        float: right;
+        background-image: url(imgs/528d82f960e348f6937f0596f0331807.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .small {
+        float: left;
+        width: 230px;
+        height: 92px;
+        margin: 10px;
+        padding: 30px 25px;
+        border-bottom: 4px solid #94070a;
+        background-color: white;
+        color: #333;
+        font-size: 16px;
+        line-height: 1.5;
+        font-family: 'Microsoft YaHei';
+    }
+
+    .box1 {
+        width: 1200px;
+        height: 512px;
+        margin: 60px auto;
+        writing-mode: vertical-lr;
+    }
+
+    .box1 .title {
+        width: 100px;
+        margin-right: 50px;
+        font-size: 32px;
+        text-indent: 3em;
+    }
+
+    .box1 div {
+        float: left;
+        width: 216px;
+        height: 100%;
+        margin: 0 10px;
+    }
+
+    .box1 .p {
+        padding-left: 24px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        color: white;
+        font-size: 24px;
+        text-indent: 1.6em;
+    }
+
+    .box1 .p1 {
+        background-image: url(imgs/0f5c1dcd6e8d7c9f57a615a02722660.png);
+    }
+
+    .box1 .p2 {
+        background-image: url(imgs/bc4d72f2b3461dfcf67618419e893c8.png);
+    }
+
+    .box1 .p3 {
+        background-image: url(imgs/daa5129ff1502b5a864d5bcfe9436fd.png);
+    }
+
+    .box1 .p4 {
+        background-image: url(imgs/55e9571c6d8350fe7f17656163bd27f.png);
+    }
+
+    .box2 {
+        width: 1200px;
+        height: 600px;
+        margin: 0 auto;
+        margin-top: 120px;
+        background-image: url(imgs/s5ef9635d4d3d2.gif);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .box2 .title {
+        position: relative;
+        width: 800px;
+        left: 50px;
+        top: 400px;
+        font-size: 32px;
+        color: #333;
+
+    }
+
+    .box2 .inner {
+        left: 420px;
+        top: 250px;
+        position: relative;
+        width: 600px;
+        height: 200px;
+        padding: 40px;
+        background-color: #94070a;
+    }
+
+    .box2 .inner img {
+        position: relative;
+        top: -60px;
+        float: left;
+        width: 200px;
+
+    }
+
+    .box2 .inner .h {
+        width: 320px;
+        position: relative;
+        top: -60px;
+        float: left;
+        padding: 0 40px;
+        color: white;
+        font-size: 20px;
+        font-family: 'Microsoft YaHei';
+    }
+
+    .box2 .inner .h .p {
+        margin-top: 20px;
+        line-height: 1.6;
+        font-size: 14px;
+    }
+
+    .footer {
+        height: 260px;
+        background-color: #94070a;
+    }
+
+    .footer .part1 {
+        float: left;
+        width: 100%;
+        height: 120px;
+        padding-bottom: 20px;
+        background-color: #94070a;
+    }
+
+    .nav_foot {
+        width: 1200px;
+        height: 120px;
+        margin: 0 auto;
+    }
+
+    .inner a {
+        display: block;
+        float: left;
+        width: 110px;
+        height: 25px;
+        padding-top: 60px;
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
+        color: white;
+        text-align: center;
+        text-decoration: none;
+    }
+
+
+    .footer .part2 {
+        float: left;
+        width: 100%;
+        height: 140px;
+        background-color: #302a29;
+    }
+
+    .part2 .foot_logo {
+        width: 1200px;
+        height: 90px;
+        margin: 0 auto;
+    }
+
+    .part2 img {
+        display: block;
+        height: 60px;
+        margin: 15px auto;
+    }
+
+    .part2 .info {
+        width: 1200px;
+        height: 35px;
+        margin: 0 auto;
+        color: white;
+        font-size: 14px;
+    }
+
+    .part2 i {
+        padding: 0 22px;
+        font-size: 12px;
+        font-style: normal;
+        color: rgba(255, 255, 255, 0.1);
+    }
+</style>
+
+<body>
+    <!-- 顶部导航 -->
+    <div class="top">
+        <div class="block">
+            <!-- 左导航 -->
+            <div class="nav_l">
+                <a href="#">学生</a><i>|</i><a href="#">教职工</a><i>|</i><a href="#">校友</a><i>|</i><a
+                    href="#">访客</a><i>|</i><a href="#">招聘</a><i>|</i><a href="#">捐赠</a>
+            </div>
+            <!-- 右导航 -->
+            <div class="nav_r">
+                <a href="#">门户</a><a href="#">网络</a><a href="#">邮箱</a><a href="#">燕云直播</a><a href="#">图书馆</a><a
+                    href="#">医学部</a><a href="#">领导信箱</a>
+            </div>
+        </div>
+    </div>
+    <!-- 头部区域 -->
+    <div class="banner">
+        <div class="header">
+            <!-- 北大logo -->
+            <a href="https://www.pku.edu.cn/" class="logo"></a>
+
+            <div class="nav">
+                <!-- 主菜单栏 -->
+                <ul>
+
+                    <li><a href="#">北大概况</a>
+                        <!-- 二级导航 -->
+                        <div class="item">
+                            <div class="pic"><img src="imgs/s5e0980f38c27a.jpg" alt="" width="142" height="142">
+                            </div>
+                            <div class="txt">
+                                北大是常为新的,<br>
+                                改进的运动的先锋,<br>
+                                要使中国向着好的,<br>
+                                往上的道路走。
+                            </div>
+                            <div class="itemr">
+                                <a href="#" class="a">北大简介</a>
+                                <a href="#" class="a">现任领导</a>
+                                <a href="#" class="a">历任领导</a>
+                                <a href="#" class="a">组织机构</a>
+                                <a href="#" class="a">历史名人</a>
+                                <a href="#" class="a">信息公开</a>
+                                <a href="#" class="a">标识系统</a>
+                            </div>
+                    </li>
+                    </li>
+                    <li><a href="#">招生</a></li>
+                    <li><a href="#">学部与院系</a></li>
+                    <li><a href="#">教育教学</a></li>
+                    <li><a href="#">科学研究</a></li>
+                    <li><a href="#">合作交流</a></li>
+                    <li><a href="#">校园生活</a></li>
+                </ul>
+            </div>
+            <!-- 右边两个小圈圈 -->
+            <div class="tools">
+                <div class="tool">🔍</div>
+                <div class="tool">EN</div>
+            </div>
+        </div>
+    </div>
+    <!-- 主体正文 -->
+    <div class="container">
+        <!-- 北大要闻 -->
+        <div class="box">
+            <div class="title">
+                <h1>北大 · 要闻</h1>
+            </div>
+            <div class="cent">
+                <div class="big"></div>
+                <div class="small">北京论坛2020
+                    “疫情重袭下的全球化新挑战和新机遇”——北京论坛（2020）在北京大学开幕</div>
+                <div class="small">时代青年担大任 凝心铸魂启新篇——北京大学2020年“一二·九”师生歌会举行</div>
+                <div class="small">学校党委召开民主党派、侨联负责人及无党派人士座谈会 就编制“十四五”规划征求意见</div>
+                <div class="small">2020年度“北京大学卡塔尔国中东研究讲席项目”中东研究中文最佳著作奖暨北京大学中东研究杰出贡献奖颁奖仪式在北京大学举行</div>
+                <div class="small">北京大学举办统战工作培训班 学习贯彻党的十九届五中全会精神</div>
+                <div class="small">第三届“中国百所大学经济学院院长论坛”在北大举行</div>
+                <div class="big2"></div>
+                <div class="small">北京大学第六届“青年干部未名管理论坛”举行</div>
+                <div class="small">北大研究生教育探索与实践 | 积极推进研究生教育改革 勇担新时代人才培养重担——心理与认知科学学院研究生培养模式初探</div>
+            </div>
+        </div>
+        <!-- 专题网站 -->
+        <div class="box1">
+            <div class="title">专题 · 网站</div>
+            <div class="p1 p">学习贯彻十九届五中全会精神</div>
+            <div class="p2 p">决战决胜脱贫攻坚</div>
+            <div class="p3 p">北大研究生教育探索与实践</div>
+            <div class="p4 p">这里视北大</div>
+        </div>
+        <!-- 教学科研 -->
+        <div class="box2">
+            <span class="title">教学·科研</span>
+            <div class="inner"><img src="imgs/ae0989895aaf4c1592334d6e9c3a9f79.jpg" alt="">
+                <div class="h">
+                    <div class="r">陈兴课题组开发基于点击化学的膨胀显微成像技术</div>
+                    <div class="p">
+                        课题组采用了多种含有生物正交官能团的化学探针，对脂质、聚糖、蛋白质、核酸、小分子等多种生物分子进行Click-ExM成像，并将该技术应用于原代细胞和脑组织切片等生物体系中，其中首次实现了对多种脂质、聚糖以及小分子的ExM成像。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 尾部区域 -->
+    <div class="footer">
+        <div class="part1">
+            <div class="nav_foot">
+                <div class="inner">
+                    <a href="#">新闻</a><a href="#">招生</a><a href="#">招聘</a><a href="#">捐赠</a><a href="#">校园地图</a><a
+                        href="#">校历</a><a href="#">燕园特写</a><a href="#">未名BBS</a>
+                </div>
+            </div>
+        </div>
+        <div class="part2">
+            <div class="foot_logo"><img src="imgs/s5de8762313bab.png" alt="">
+            </div>
+            <div class="info"><span><a>版权所有©北京大学</a></span><i>| </i><span><a>地址：北京市海淀区颐和园路5号</a></span><i>|
+                </i><span><a>邮编：100871</a></span><i>| </i><span><a>反馈意见：its@pku.edu.cn</a></span><i>|
+                </i><span><a>京ICP备05065075号-1</a></span><i>| </i><span><a>京公网安备 110402430047 号</a></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

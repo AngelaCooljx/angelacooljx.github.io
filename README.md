@@ -1,2 +1,2 @@
 # angelacooljx.github.io
-江财网站首页作业（待完工）
+仿制北大官网首页作业（待完工）

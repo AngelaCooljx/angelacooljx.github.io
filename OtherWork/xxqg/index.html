@@ -109,7 +109,7 @@
         color: white;
         padding: 0 10px;
         cursor: pointer;
-        line-height: 34px;
+        line-height: 33px;
         font-size: 18px;
         font-weight: 500;
         width: 110px;
@@ -118,7 +118,6 @@
 
     .menu .menu-row a:hover {
         font-size: 20px;
-        color: rgb(255, 200, 200);
     }
 
     .menu .menu-row a:active {
@@ -170,6 +169,7 @@
         text-align: center;
         /* color: rgb(208, 2, 27); */
         color: gold;
+        /* font-family: '华文中宋'; */
         font-size: 39px;
         letter-spacing: 0px;
         font-weight: 900;
@@ -183,6 +183,7 @@
         width: 685px;
         /* color: rgb(0, 0, 0); */
         color: gold;
+        font-family: '华文中宋';
         font-size: 18px;
         letter-spacing: 0px;
         font-weight: normal;
@@ -191,7 +192,7 @@
 
     .box1 .title .h2:hover {
         /* color: rgb(208, 2, 27); */
-        color: lightcoral;
+        color: goldenrod;
     }
 
     .box1 .title .moreurl {
@@ -200,7 +201,7 @@
         width: 100px;
         margin-top: 3px;
         /* color: rgb(208, 2, 27); */
-        color: lightcoral;
+        color: rgb(255, 180, 180);
         font-size: 16px;
         font-weight: 700;
         font-family: '宋体';
@@ -283,6 +284,7 @@
     }
 
     .box2 .text:hover {
+        font-weight: 700;
         color: rgb(208, 2, 27);
     }
 
@@ -345,6 +347,7 @@
 
     .box3 .news .p .title a {
         font-size: 28px;
+        font-family: '华文中宋';
         font-weight: 900;
         color: rgb(208, 2, 27);
     }
@@ -366,6 +369,7 @@
     }
 
     .box3 .news .p .text ul li a:hover {
+        font-weight: 700;
         color: rgb(208, 2, 27);
     }
 
@@ -428,12 +432,14 @@
     }
 
     .box3 .study .block a:hover {
+        font-weight: 700;
         color: rgb(208, 2, 27);
     }
 
     .box3 .study .block .title {
         line-height: 59px;
         color: rgb(208, 2, 27);
+        font-family: '华文中宋';
         font-weight: 900;
         font-size: 28px;
     }
@@ -453,12 +459,65 @@
         width: 100%;
     }
 
-    .content2 {
+    .box3 .content2 {
         float: left;
         width: 326px;
         margin: 5px 7px 0 0;
-        height: 440px;
-        background-color: lightpink;
+        height: 279px;
+        /* background-color: lightpink; */
+    }
+
+    .box3 .study .content2 .title {
+        height: 59px;
+        margin-bottom: 20px;
+        line-height: 59px;
+        font-family: '华文中宋';
+        font-weight: 900;
+        font-size: 28px;
+    }
+
+    .box3 .study .content2 .title a {
+        color: rgb(208, 2, 27);
+    }
+
+    .box3 .study .content2 hr {
+        height: 1px;
+    }
+
+    .box3 .study .content2 .img {
+        width: 326px;
+        height: 200px;
+        margin: auto;
+        background-size: cover;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+    }
+
+    .box3 .study .content2 .i1 {
+        background-image: url(imgs/7336e18ee4ba4488bc314671aacde885.jpg);
+    }
+
+    .box3 .study .content2 .i2 {
+        background-image: url(imgs/fecf3c7b9fea4dad9a4de2e74b98f4d8.jpg);
+    }
+
+    .box3 .study .content2 .i3 {
+        background-image: url(imgs/001d38ea34644c068ccf56d5306e2505.jpg);
+    }
+
+    .box3 .study .content2 .url {
+        display: block;
+        width: 326px;
+        height: 160px;
+    }
+
+    .box3 .study .content2 .h {
+        height: 40px;
+        text-align: center;
+        font-size: 13px;
+        line-height: 40px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
     }
 </style>
 <link rel="shortcut icon" href="imgs/favicon.ico " />
@@ -688,9 +747,33 @@
                     </div>
                 </div><a href="#"><img src="imgs/419baa27ffe24bb68240d60f6f34f7a2.jpg" alt="" class="img4"></a><a
                     href="#"><img src="imgs/d931e155fc194edcbd71fcc279320859.jpg" alt="" class="img4"></a>
-                <div class="content2"></div>
-                <div class="content2"></div>
-                <div class="content2"></div>
+                <div class="content2">
+                    <div class="title"><a href="#">强国征文</a>
+                        <hr>
+                    </div>
+                    <div class="img i1">
+                        <a href="#" class="url"></a>
+                        <div class="h">“爱国情·强国志·报国行”主题征文</div>
+                    </div>
+                </div>
+                <div class="content2">
+                    <div class="title"><a href="#">实播平台</a>
+                        <hr>
+                    </div>
+                    <div class="img i2">
+                        <a href="#" class="url"></a>
+                        <div class="h">“小康生活 文明沈阳”丨大东副食：人间繁华烟火气</div>
+                    </div>
+                </div>
+                <div class="content2">
+                    <div class="title"><a href="#">身边的感动</a>
+                        <hr>
+                    </div>
+                    <div class="img i3">
+                        <a href="#" class="url"></a>
+                        <div class="h">江西景德镇：“90后”瓷都时间修复者</div>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="box4"></section>

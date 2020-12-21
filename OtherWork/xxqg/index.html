@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习强国</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        line-height: 1.5;
+    }
+
+    body {
+        min-width: 1200px;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    hr {
+        background-color: rgb(208, 2, 27);
+        border: none;
+    }
+
+    .banner {
+        width: 100%;
+        height: 192px;
+    }
+
+    .top {
+        width: 100%;
+        height: 115px;
+        background: #ce0000 url(imgs/c1ebf079ca4a317d80c059903d7cbb4f.jpg) no-repeat center;
+    }
+
+    .xuexi {
+        position: relative;
+        width: 1000px;
+        height: 100%;
+        margin: auto;
+    }
+
+    .xuexi .logo {
+        display: block;
+        position: absolute;
+        top: 15px;
+        left: 50px;
+        width: 150px;
+        height: 80px;
+        background-image: url(imgs/5c0cbdcb8a12e151903b3f14e3babc6f.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .xuexi .right {
+        position: absolute;
+        width: 227px;
+        height: 82px;
+        top: 25px;
+        right: 35px;
+        background-image: url(imgs/05b44bad063c5735d66906e3975ea644.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .nav {
+        width: 100%;
+        height: 84px;
+        background-color: #f1eee9;
+    }
+
+    .menu {
+        width: 1000px;
+        height: 100%;
+        margin: auto;
+        /* background-color: antiquewhite; */
+    }
+
+    .menu .menu-list {
+        float: left;
+        width: 810px;
+        height: 72px;
+        padding: 6px 20px;
+        /* background-color: lightcoral; */
+    }
+
+    .menu .menu-row {
+        display: flex;
+    }
+
+    .menu .menu-row a {
+        flex: 1;
+        text-align: center;
+        color: #0f0e0e;
+        padding: 0 10px;
+        cursor: pointer;
+        line-height: 34px;
+        font-size: 18px;
+        font-weight: 500;
+        width: 110px;
+        box-sizing: border-box;
+    }
+
+    .menu .menu-row a:hover {
+        color: red;
+    }
+
+    .menu .login {
+        float: left;
+        width: 88px;
+        height: 66px;
+        padding: 9px 31px;
+        /* background-color: lightskyblue; */
+    }
+
+    .menu .login a.icon {
+        display: block;
+        width: 88px;
+        height: 28px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        cursor: pointer;
+    }
+
+    .menu .login a.search-icon {
+        background-image: url(imgs/d5f50c2c701b6ad7716ea4f02304fca9.png);
+        margin-bottom: 10px;
+    }
+
+    .menu .login a.login-icon {
+        background-image: url(imgs/4bf8210cc871017678ac449005e5d44e.png);
+    }
+
+    .box1 {
+        height: 666px;
+        margin-bottom: 17px;
+        /* background-color: lightblue; */
+    }
+
+    .box1 .title {
+        width: 1000px;
+        height: 108px;
+        margin: auto;
+    }
+
+    .box1 .title .h1 {
+        display: block;
+        text-align: center;
+        color: rgb(208, 2, 27);
+        font-size: 39px;
+        letter-spacing: 0px;
+        font-weight: 900;
+        margin-right: 15px;
+        padding-top: 1px;
+    }
+
+    .box1 .title .h2 {
+        display: block;
+        float: left;
+        width: 685px;
+        color: rgb(0, 0, 0);
+        font-size: 18px;
+        letter-spacing: 0px;
+        font-weight: normal;
+        margin: 0 0 6px 125px;
+    }
+
+    .box1 .title .h2:hover {
+        color: rgb(208, 2, 27);
+    }
+
+    .box1 .title .moreurl {
+        display: block;
+        float: left;
+        width: 100px;
+        color: rgb(208, 2, 27);
+        font-size: 16px;
+        font-weight: 700;
+        font-family: '宋体';
+    }
+
+    .box1 hr {
+        width: 1000px;
+        margin: auto;
+    }
+
+    .box1 .title #hr1 {
+        height: 2px;
+    }
+
+    .box1 .title #hr2 {
+        height: 5px;
+        margin-top: 8px;
+    }
+
+    .box1 .img {
+        position: relative;
+        width: 1000px;
+        height: 560px;
+        margin: auto;
+        background-image: url(imgs/056d4a9afccb40a8bb06597a458fbcf7.jpg);
+        background-size: contain;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+    }
+
+    .box1 .img .h {
+        position: relative;
+        top: 500px;
+        height: 60px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 60px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .box2 {
+        height: 365px;
+        margin: 20px 0;
+        padding: 30px 0;
+        background-color: #f3e7d8;
+    }
+
+    .box2 .p {
+        width: 1000px;
+        height: 100%;
+        margin: auto;
+    }
+
+    .box2 .p1,
+    .box2 .p2 {
+        float: left;
+        width: 350px;
+        height: 100%;
+    }
+
+    .box2 ul {
+        margin: 30px 5px 0 0;
+    }
+
+    .box2 li {
+        display: block;
+        height: 40px;
+    }
+
+    .box2 .text {
+        display: block;
+        color: black;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .box2 .text:hover {
+        color: rgb(208, 2, 27);
+    }
+
+    .box2 .img {
+        width: 100%;
+        height: 85px;
+        float: left;
+        margin-bottom: 6px;
+
+    }
+
+    .box2 .p3 {
+        float: left;
+        width: 300px;
+        height: 100%;
+    }
+
+    .box2 .p3 img {
+        margin-top: 3px;
+        width: 300px;
+    }
+
+    .box3 {
+        width: 1000px;
+        height: 3000px;
+        margin: auto;
+    }
+
+    .box3 .pic {
+        display: block;
+        width: 1000px;
+        height: 165px;
+        margin: 25px auto;
+        background-repeat: no-repeat;
+    }
+
+    .box3 .pic1 {
+        background-image: url(imgs/6f4dcd7982c24c3a8c5613a9656b9ca6.jpg);
+    }
+
+    .box3 .pic2 {
+        background-image: url(imgs/b8bef2d90f61464fb5a4cc1ced8567ab.jpg);
+    }
+
+    .box3 .p {
+        float: left;
+        width: 650px;
+        height: 100%;
+    }
+
+    .box3 .news {
+        width: 1000px;
+        height: 350px;
+        margin: 10px 8px;
+    }
+
+    .box3 .news .p .title {
+        height: 49px;
+    }
+
+    .box3 .news .p .title a {
+        font-size: 28px;
+        font-weight: 900;
+        color: rgb(208, 2, 27);
+    }
+
+    .box3 .news .p .text {
+        height: 250px;
+        padding: 25px 0;
+    }
+
+    .box3 .news .p .text ul li {
+        display: block;
+        float: left;
+        width: 325px;
+        height: 35px;
+    }
+
+    .box3 .news .p .text ul li a {
+        color: black;
+    }
+
+    .box3 .news .p .text ul li a:hover {
+        color: rgb(208, 2, 27);
+    }
+
+    .box3 .news .p hr {
+        margin: auto;
+        height: 1px;
+    }
+
+    .box3 .img {
+        float: left;
+        width: 350px;
+        height: 100%;
+    }
+
+    .box3 .img1 {
+        margin-left: 10px;
+        width: 150px;
+    }
+
+    .box3 .img2 {
+        width: 340px;
+    }
+
+    .box3 .pic3 {
+        background-image: url(imgs/40f4b583-b72d-44fc-81c2-ce12a5949e70.png);
+    }
+
+    .box3 .study .block {
+        float: left;
+        width: 326px;
+        margin: 5px 7px 0 0;
+        height: 440px;
+    }
+
+    .box3 .study .block .title {
+        display: block;
+        width: 100%;
+        height: 59px;
+    }
+
+    .box3 .study .block .content {
+        width: 90%;
+        /* background-color: blueviolet; */
+    }
+
+    .box3 .study .block .img3 {
+        width: 326px;
+    }
+
+    .box3 .study .block a {
+        display: block;
+        font-size: 16px;
+        color: black;
+        width: 100%;
+        height: 35px;
+        line-height: 35px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .box3 .study .block a:hover {
+        color: rgb(208, 2, 27);
+    }
+
+    .box3 .study .block .title {
+        line-height: 59px;
+        color: rgb(208, 2, 27);
+        font-weight: 900;
+        font-size: 28px;
+    }
+
+    .box3 .study .block hr {
+        height: 1px;
+    }
+
+    .box3 .study>a {
+        display: block;
+        float: left;
+        width: 490px;
+        margin: 30px 5px 0 0;
+    }
+
+    .box3 .study>a img {
+        width: 100%;
+    }
+
+    .content2 {
+        float: left;
+        width: 326px;
+        margin: 5px 7px 0 0;
+        height: 440px;
+        background-color: lightpink;
+    }
+</style>
+<link rel="shortcut icon" href="imgs/favicon.ico " />
+
+<body>
+    <div class="banner">
+        <div class="top">
+            <div class="xuexi"><a href="/" class="logo"></a>
+                <div class="right"></div>
+            </div>
+        </div>
+        <div class="nav">
+            <div class="menu">
+                <div class="menu-list">
+                    <div class="menu-row"><a
+                            href="https://www.xuexi.cn/cc72a0454287bdedb7e2c156db55e818/71eb7214c6c0c1f5e6ec6e29564decb4.html"
+                            data-locations="0">学习新思想</a><a
+                            href="https://www.xuexi.cn/f997e76a890b0e5a053c57b19f468436/018d244441062d8916dd472a4c6a0a0b.html"
+                            data-locations="1">十九大时间</a><a
+                            href="https://www.xuexi.cn/d184e7597cc0da16f5d9f182907f1200/9a3668c13f6e303932b5e0e100fc248b.html"
+                            data-locations="2">学习理论</a><a
+                            href="https://www.xuexi.cn/482f31e90c481f2161a19ecfcbb91f8b/e6109f421e472b4399b006ba21bc2ecd.html"
+                            data-locations="3">红色中国</a><a
+                            href="https://www.xuexi.cn/896bddc5f57a423b857a85eb40f98945/72742e3e40c96ade71e42b6e7ed42419.html"
+                            data-locations="4">学习科学</a><a
+                            href="https://www.xuexi.cn/261c9a142ef8e6375ed554815a26d585/f2d8ff735982530b7a8c9bb90fa99f68.html"
+                            data-locations="5">环球视野</a></div>
+                    <div class="menu-row"><a
+                            href="https://www.xuexi.cn/5c90534c80d14c060d6683fa960e3676/82573c005c024095037d2186a02244cb.html"
+                            data-locations="6">习近平文汇</a><a
+                            href="https://www.xuexi.cn/0809b8b6ab8a81a4f55ce9cbefa16eff/ae60b027cb83715fd0eeb7bb2527e88b.html"
+                            data-locations="7">学习电视台</a><a
+                            href="https://www.xuexi.cn/f547c0f321ac9a0a95154a21485a29d6/1cdd8ef7bfc3919650206590533c3d2a.html"
+                            data-locations="8">学习慕课</a><a
+                            href="https://www.xuexi.cn/b069a45c80585e78b558c64306bfdf92/53194398355c363c5c635c74a70c7b45.html"
+                            data-locations="9">学习文化</a><a
+                            href="https://www.xuexi.cn/a9d25ec4ca996c6100d2982d33a1d8b2/4f02a12dd5663651422f5c55e10ef19e.html"
+                            data-locations="10">强军兴军</a><a
+                            href="https://www.xuexi.cn/b51582609167f915bcd0f5532daee48d/778eae63fed91ff4c54dc15f22c7fc31.html"
+                            data-locations="11">美丽中国</a></div>
+                </div>
+                <div class="login"><a class="icon search-icon"
+                        href="https://www.xuexi.cn/dc12897105c8c496d783c5e4d3b680a2/9a75e290b9cf8cb8fb529a6e503db78d.html"
+                        data-target="搜索"></a><a class="icon login-icon"></a></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <section class="box1">
+            <div class="title"><a href="#" class="h1">中央经济工作会议在北京举行 习近平作重要讲话</a><a href="#" class="h2">习近平发表重要讲话
+                    总结2020年经济工作 分析当前经济形势 部署2021年经济工作</a><a href="#" class="moreurl">更多头条</a>
+                <hr id="hr1">
+                <hr id="hr2">
+            </div>
+            <div class="img">
+                <div class="h">习近平在气候雄心峰会上发表重要讲话</div>
+            </div>
+        </section>
+        <section class="box2">
+            <div class="p">
+                <div class="p1">
+                    <ul>
+                        <li><a href="#" class="text">习近平向晋升上将军衔警衔的军官警官颁发命令状并表示祝贺</a></li>
+                        <li><a href="#" class="text">习近平签署命令 发布新修订《军队计量条例》</a></li>
+                        <li><a href="#" class="text">习近平同志《论坚持全面依法治国》主要篇目介绍</a></li>
+                        <li><a href="#" class="text">习近平同坦桑尼亚总统马古富力通电话</a></li>
+                        <li><a href="#"><img src="imgs/743c667f8b3c859de8e7c03d9a549763.jpg" alt="" class="img"></a>
+                        </li>
+                        <li><a href="#"><img src="imgs/bc3eb58f9640182ded4d3f03f24f1d7c.jpg" alt="" class="img"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="p2">
+                    <ul>
+                        <li><a href="#" class="text">习近平向法国总统马克龙致慰问电</a></li>
+                        <li><a href="#" class="text">习近平同志《论坚持全面依法治国》出版发行</a></li>
+                        <li><a href="#" class="text">习近平同智利总统皮涅拉通电话</a></li>
+                        <li><a href="#" class="text">习近平向人类减贫经验国际论坛致贺信</a></li>
+                        <li><a href="#"><img src="imgs/2bddfe46b9efc18852ccd2d547ab917a.jpg" alt="" class="img"></a>
+                        </li>
+                        <li><a href="#"><img src="imgs/ac06635f85e3f45603633d68e8edc844.jpg" alt="" class="img"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="p3"><a href="#"><img src="imgs/screenshot-www.xuexi.cn-2020.12.21-09_27_57.png" alt=""></a>
+                    <a href="#"><img src="imgs/screenshot-www.xuexi.cn-2020.12.21-09_28_46.png" alt="">
+                        <a href="#"></a> <img src="imgs/screenshot-www.xuexi.cn-2020.12.21-09_29_23.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="box3"><a href="#" class="pic pic1"></a><a href="#" class="pic pic2"></a>
+            <div class="news">
+                <div class="p">
+                    <div class="title"><a href="#">重要新闻</a></div>
+                    <hr>
+                    <div class="text">
+                        <ul>
+                            <li><a href="#">王晨会见安哥拉国民议会第一副议长迪亚斯</a></li>
+                            <li><a href="#">刘鹤出席嫦娥五号任务月球样品交接仪式</a></li>
+                            <li><a href="#">郭声琨：积极贡献法治智慧法治力量</a></li>
+                            <li><a href="#">黄坤明出席《辞海》（第七版）出版座谈会</a></li>
+                            <li><a href="#">外交部驳斥中国影响美大选说法：无中生有</a></li>
+                            <li><a href="#">国家发改委:电力需求增长 全力保障电力供应</a></li>
+                            <li><a href="#">国家能源局：多措并举保障电力供应</a></li>
+                            <li><a href="#">工信部：三季度电信服务质量持续改善</a></li>
+                            <li><a href="#">截至12月17日24时新冠肺炎疫情最新情况</a></li>
+                            <li><a href="#">财政部:电子票据与纸质票据有同等法律效力</a></li>
+                            <li><a href="#">自然资源部:生态保护修复工作取得显著成效</a></li>
+                            <li><a href="#">多部门联合发布长江流域生物资源状况公报</a></li>
+                            <li><a href="#">农业农村部：明年将新建高标准农田1亿亩</a></li>
+                            <li><a href="#">商务部：国内汽车市场加快复苏</a></li>
+                            <li><a href="#">文化和旅游部：太极拳、送王船申遗成功</a></li>
+                            <li><a href="#">央行：11月我国债券市场发债4.7万亿元</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="img"><a href="#"><img src="imgs/screenshot-www.xuexi.cn-2020.12.21-10_19_38.png" alt=""
+                            class="img1"></a>
+                    <a href="#"><img src="imgs/screenshot-www.xuexi.cn-2020.12.21-10_20_04.png" alt="" class="img1"></a>
+                    <a href="#"><img src="imgs/screenshot-www.xuexi.cn-2020.12.21-10_23_23.png" alt="" class="img2"></a>
+                    <a href="#"><img src="imgs/screenshot-www.xuexi.cn-2020.12.21-10_20_54.png" alt="" class="img2"></a>
+                </div>
+            </div><a href="#" class="pic pic3"></a>
+            <div class="study">
+                <div class="block"><a href="#" class="title">学习时评</a>
+                    <hr>
+                    <div class="content">
+                        <ul>
+                            <li><a href="#">大力弘扬探月精神 开启星际探测新征程</a></li>
+                            <li><a href="#">接力人类梦想 开启新的征程</a></li>
+                            <li><a href="#">探月精神将激励中国为人类福祉作出更多贡献</a></li>
+                            <li><a href="#">嫦娥五号映照自立自强创新路</a></li>
+                            <li><a href="#">改革就是要盯住“堵点”“痛点”发力</a></li>
+                            <li><a href="#">对中国投下信任票</a></li>
+                            <li><a href="#">历史是勇敢者创造的</a></li>
+                            <li><a href="#">保护知识产权就是保护创新</a></li>
+                        </ul>
+                    </div><a href="#" style="margin-top: 20px;height: 80px;"><img
+                            src="imgs/f8e0e1bceff31015d963652c430bbe29.jpg" alt="" class="img3"></a>
+                </div>
+                <div class="block"><a href="#" class="title">综合新闻</a>
+                    <hr>
+                    <div class="content">
+                        <ul>
+                            <li><a href="#">善用改革开新局——全面贯彻新发展理念的三明探索与实践</a></li>
+                            <li><a href="#">三明市将乐县常口村：“青山绿水是无价之宝”</a></li>
+                            <li><a href="#">嫦娥五号：创造五项“中国首次”44年来再获月球样品</a></li>
+                            <li><a href="#">我国开展第七次全国人口普查事后质量抽查</a></li>
+                            <li><a href="#">前11月查处涉黑涉恶保护伞问题2.96万起</a></li>
+                            <li><a href="#">2020年游戏产业年收入增幅预计超20%</a></li>
+                            <li><a href="#">辽宁大连新增2例新冠肺炎无症状感染者</a></li>
+                            <li><a href="#">全球累计新冠肺炎确诊病例达72851747例</a></li>
+                        </ul>
+                    </div><a href="#" style="margin-top: 20px;height: 80px;"><img
+                            src="imgs/66ce5e0147d5e26c05612a3bec94bfa2.jpg" alt="" class="img3"></a>
+                </div>
+                <div class="block"><a href="#" class="title">中宣部发布</a>
+                    <hr>
+                    <div class="content">
+                        <ul>
+                            <li><a href="#">黄坤明出席《辞海》（第七版）出版座谈会</a></li>
+                            <li><a href="#">2020年"好记者讲好故事"首场巡讲活动启动</a></li>
+                            <li><a href="#">2020"优秀现实题材文学出版工程"入选作品揭晓</a></li>
+                            <li><a href="#">“核心价值观百场讲坛”第105场走进滦平</a></li>
+                            <li><a href="#">中宣部授予张桂梅“时代楷模”称号</a></li>
+                            <li><a href="#">未来城市生活垃圾回收利用率将达到35%以上</a></li>
+                            <li><a href="#">电视剧高质量发展座谈会举办</a></li>
+                            <li><a href="#">中组部中宣部评选公布32名“最美公务员”</a></li>
+                        </ul>
+                    </div><a href="#" style="margin-top: 20px;height: 80px;"><img
+                            src="imgs/fb3eb6bfbca517b9909a2eab716c5caf.jpg" alt="" class="img3"></a>
+                </div>
+                <div class="block"><a href="#" class="title">学习实践</a>
+                    <hr>
+                    <div class="content">
+                        <ul>
+                            <li><a href="#">【决战决胜脱贫攻坚】湖北随州邱畈村：香菇扶贫合作社助圆致富梦</a></li>
+                            <li><a href="#">【决战决胜脱贫攻坚】山东东阿：用好“九字诀”抓好产业扶贫项目运营管理</a></li>
+                            <li><a href="#">【决战决胜脱贫攻坚】江苏亭湖：扶贫协作，千里结“亲戚”共奔小康路</a></li>
+                            <li><a href="#">“十三五”期间 云南预计公路总里程超过26.5万公里</a></li>
+                            <li><a href="#">西藏日喀则市桑珠孜区向群众发放无线数字化覆盖接收设备</a></li>
+                            <li><a href="#">江西确定国企改革创新三年行动“路线图”</a></li>
+                            <li><a href="#">天津：住房租赁监管服务平台将上线</a></li>
+                            <li><a href="#">北京通州老槐庄建公园 村民用金点子“随份子”</a></li>
+                            <li><a href="#">山东已建成绿色节能建筑近10亿平方米 多项指标位居全国前列</a></li>
+                            <li><a href="#">新疆兵团十三师：“政策找人”让失业待遇申领服务有温度</a></li>
+                            <li><a href="#">甘肃：“双轮驱动”助力退役军人就业创业</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="block"><a href="#" class="title">县级融媒</a>
+                    <hr>
+                    <div class="content">
+                        <ul>
+                            <li><a href="#">云南昭通市迤那村：文明“星火”点亮乡村“美丽之光”</a></li>
+                            <li><a href="#">河北衡水冀州区：生态红利提升百姓幸福感</a></li>
+                            <li><a href="#">浙江安吉唐舍村：漫山遍野掘“金银” 集体经济发“新枝”</a></li>
+                            <li><a href="#">辽宁营口市站前区：党建领航 打好提升城市基层服务水平“三张牌”</a></li>
+                            <li><a href="#">江苏江阴徐霞客镇：小小党员中心户 撬动基层治理大基石</a></li>
+                            <li><a href="#">河南安阳：建立在留置一线的临时党支部</a></li>
+                            <li><a href="#">江西吉安市吉州区：建设美丽乡村 “颜值”“内涵”双提升</a></li>
+                            <li><a href="#">山东济宁任城区：非遗传承融入新时代文明实践</a></li>
+                            <li><a href="#">内蒙古科左后旗：“乌兰牧骑+”系列志愿服务活动聚民心</a></li>
+                            <li><a href="#">天津北辰区韩家墅村有本文明“三字经”</a></li>
+                            <li><a href="#">安徽肥西：2020年完成“送戏进万村”演出</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="block"><a href="#" class="title">新闻发布厅</a>
+                    <hr>
+                    <div class="content">
+                        <ul>
+                            <li><a href="#">国家卫生健康委员会就健康促进召开“巡礼十三五·迈向全民健康这五年”举行发布会（重庆）</a></li>
+                            <li><a href="#">国新办举行落实五中全会精神壮大高技能人才队伍发布会</a></li>
+                            <li><a href="#">国新办举行探月工程嫦娥五号任务有关情况发布会</a></li>
+                            <li><a href="#">湖南省召开新闻发布会通报涉黑涉恶案件办理情况</a></li>
+                            <li><a href="#">国新办举行落实五中全会精神做好生态保护修复工作发布会</a></li>
+                            <li><a href="#">内蒙古自治区就生态环境保护督察工作开展情况召开新闻发布会</a></li>
+                            <li><a href="#">2020年12月17日外交部发言人汪文斌主持例行记者会</a></li>
+                            <li><a href="#">商务部12月17日例行新闻发布会</a></li>
+                            <li><a href="#">海南省社会保障卡一卡通工作进展情况新闻发布会</a></li>
+                            <li><a href="#">国家发展改革委12月份例行新闻发布会</a></li>
+                            <li><a href="#">商务部有关负责人谈2020年11月份我国消费市场情况</a></li>
+                        </ul>
+                    </div>
+                </div><a href="#"><img src="imgs/419baa27ffe24bb68240d60f6f34f7a2.jpg" alt="" class="img4"></a><a
+                    href="#"><img src="imgs/d931e155fc194edcbd71fcc279320859.jpg" alt="" class="img4"></a>
+                <div class="content2"></div>
+                <div class="content2"></div>
+                <div class="content2"></div>
+            </div>
+        </section>
+        <section class="box4"></section>
+        <section class="box5"></section>
+        <section class="box6"></section>
+    </div>
+    <div class="footer"></div>
+</body>
+
+</html>

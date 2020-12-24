@@ -1,0 +1,3690 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习强国-学习天地</title>
+</head>
+<link rel="shortcut icon" href="imgs/favicon.ico " />
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        line-height: 1.15;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        min-width: 1024px;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    p {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+
+    hr {
+        background-color: rgb(208, 2, 27);
+        border: none;
+    }
+
+    .mm {
+        position: fixed;
+        line-height: 100%;
+        text-align: center;
+        font-family: '华文中宋';
+        color: white;
+        cursor: pointer;
+        background-color: rgba(255, 32, 32, 0.5);
+        z-index: 999;
+    }
+
+    .mm1 {
+        width: 100px;
+        height: 40px;
+        top: 85px;
+        right: 0;
+        border-radius: 24px 0 0 24px;
+        line-height: 40px;
+        font-size: 20px;
+    }
+
+    .mm2 {
+        width: 100px;
+        height: 40px;
+        top: 85px;
+        left: 0;
+        border-radius: 0 24px 24px 0;
+        line-height: 40px;
+        font-size: 20px;
+    }
+
+    .mm3 {
+        width: 100px;
+        height: 40px;
+        top: 145px;
+        left: 0;
+        border-radius: 0 24px 24px 0;
+        line-height: 40px;
+        font-size: 20px;
+    }
+
+    .mm2>a,
+    .mm3>a {
+        color: white;
+    }
+
+    .aa {
+        display: none;
+        position: fixed;
+        top: 126px;
+        right: 0;
+        border-radius: 12px 0 0 12px;
+        width: 100px;
+        height: 500px;
+        background-color: rgba(255, 40, 40, 0.7);
+        z-index: 999;
+    }
+
+    .aa ul {
+        width: 100px;
+        height: 240px;
+    }
+
+    .aa li {
+        width: 100px;
+        height: 30px;
+        margin-top: 10px;
+        font-family: '华文中宋';
+        font-weight: 700;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    .aa a {
+        font-size: 18px;
+        color: white;
+    }
+
+    .aa a:hover {
+        font-size: 20px;
+    }
+
+    .aa .back {
+        text-align: center;
+        line-height: 40px;
+        font-size: 17px;
+        display: block;
+        width: 100px;
+        height: 40px;
+        background-color: rgba(255, 20, 20, 0.5);
+    }
+
+    .aa .qr {
+        width: 84px;
+        height: 86px;
+        margin: 8px 8px 0 8px;
+        background-image: url(imgs/b9cb90bac825074ef044d479f74095b7.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .aa .b {
+        height: 20px;
+        text-align: center;
+        font-size: 10px;
+        color: white;
+    }
+
+    .aa .c {
+        height: 60px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 19px;
+        color: white;
+    }
+
+    .aa .d {
+        height: 32px;
+        text-align: center;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 16px;
+        color: white;
+    }
+
+    .banner {
+        width: 100%;
+        height: 200px;
+    }
+
+    .top {
+        width: 100%;
+        height: 100px;
+        background: #ce0000 url(imgs/c1ebf079ca4a317d80c059903d7cbb4f.jpg) no-repeat center;
+    }
+
+    .xuexi {
+        position: relative;
+        width: 1000px;
+        height: 100%;
+        margin: auto;
+    }
+
+    .xuexi .logo {
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 50px;
+        width: 150px;
+        height: 80px;
+        background-image: url(imgs/5c0cbdcb8a12e151903b3f14e3babc6f.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .xuexi .right {
+        position: absolute;
+        width: 227px;
+        height: 82px;
+        top: 15px;
+        right: 35px;
+        background-image: url(imgs/05b44bad063c5735d66906e3975ea644.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .nav {
+        width: 100%;
+        height: 100px;
+        background-color: #c00;
+    }
+
+    .menu {
+        width: 1000px;
+        height: 77px;
+        margin: auto;
+        border-radius: 24px;
+        background-color: #ce3333;
+    }
+
+    .menu .menu-list {
+        float: left;
+        width: 720px;
+        height: 65px;
+        padding: 6px 62px;
+    }
+
+    .menu .menu-row {
+        display: flex;
+    }
+
+    .menu .menu-row a {
+        flex: 1;
+        text-align: center;
+        /* color: #0f0e0e; */
+        color: white;
+        cursor: pointer;
+        line-height: 32px;
+        font-size: 16px;
+        font-weight: 500;
+        width: 110px;
+        box-sizing: border-box;
+    }
+
+    .menu .menu-row a:hover {
+        font-size: 18px;
+    }
+
+    .menu .menu-row a:active {
+        font-size: 18px;
+        color: rgb(255, 180, 180);
+    }
+
+    .menu .login {
+        float: left;
+        width: 88px;
+        height: 57px;
+        padding: 10px;
+    }
+
+    .menu .login a.icon {
+        display: block;
+        width: 88px;
+        height: 28px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        cursor: pointer;
+    }
+
+    .menu .login a.search-icon {
+        background-image: url(imgs/d5f50c2c701b6ad7716ea4f02304fca9.png);
+        margin-bottom: 5px;
+    }
+
+    .menu .login a.login-icon {
+        background-image: url(imgs/4bf8210cc871017678ac449005e5d44e.png);
+    }
+
+    .container>.title {
+        width: 980px;
+        height: 100px;
+        margin: 30px auto;
+        border-bottom: 1px dashed #c00;
+        line-height: 72px;
+        font-size: 24px;
+        text-align: center;
+        color: #c00;
+    }
+
+    .great {
+        width: 100%;
+        height: 630px;
+        margin: 0px;
+        padding: 0px;
+        border-radius: 0px;
+        min-height: 100px;
+        background-size: contain;
+        background-position: center bottom;
+        background-image: url(imgs/pack_3.jpg);
+        background-repeat: no-repeat;
+    }
+
+    .great1 {
+        width: 1000px;
+        height: 630px;
+        margin: auto;
+    }
+
+    .great2 {
+        width: 1000px;
+        height: 37px;
+        text-align: center;
+        width: 100%;
+        font-size: 28px;
+        font-weight: 600;
+        list-style: none;
+        padding-top: 10px;
+    }
+
+    .great2 a {
+        text-decoration: none;
+        color: rgb(184, 38, 26);
+        font-style: 28px;
+    }
+
+    .great3 {
+        width: 800px;
+        height: 160px;
+        margin: auto;
+    }
+
+    .great5 {
+        width: 800px;
+        height: 110px;
+        margin: 10px 0;
+    }
+
+    .great4 {
+        float: left;
+        padding-right: 18px;
+    }
+
+    .great4 a {
+        display: block;
+        width: 186px;
+        height: 110px;
+    }
+
+    .great6 {
+        float: right;
+    }
+
+    .great6 a {
+        display: block;
+        width: 186px;
+        height: 110px;
+    }
+
+    .great7 {
+        width: 800px;
+        height: 40px;
+    }
+
+    .great7 li {
+        list-style: none;
+        text-align: center;
+        line-height: 40px;
+    }
+
+    .great7 a {
+        display: block;
+        width: 186px;
+        height: 36px;
+        float: left;
+        text-decoration: none;
+        color: #000;
+
+    }
+
+    .great8 a {
+        margin-left: 18px;
+    }
+
+    .greats1 {
+        width: 1000px;
+        height: 250px;
+        margin-top: 20px;
+    }
+
+    .greats2 {
+        width: 1000px;
+    }
+
+    .greats3 {
+        width: 235px;
+        height: 49px;
+        margin: auto;
+    }
+
+    .greats4 {
+        width: 1000px;
+        height: 175px;
+        margin-top: 20px;
+    }
+
+    .greats4 a {
+        display: block;
+        float: left;
+        width: 250px;
+        height: 38px;
+        text-decoration: none;
+        color: #000;
+    }
+
+    .greats4 li {
+        list-style: none;
+        line-height: 38px;
+    }
+
+    .greats4 a:hover {
+        color: #ce0000;
+    }
+
+    .greats5 {
+        width: 1000px;
+        height: 155px;
+    }
+
+    .greatss {
+        float: left;
+        margin: 32px 24px 0 24px;
+    }
+
+    .greatss1 {
+        float: left;
+        margin: 10px 20px 0 20px;
+    }
+
+    .yes {
+        width: 100%;
+        height: 224px;
+        background-color: #ce0000;
+    }
+
+    .yes1 {
+        width: 1000px;
+        height: 224px;
+        margin: auto;
+    }
+
+    .yes2 {
+        width: 1000px;
+        padding: 20px 0;
+        height: 184px;
+    }
+
+    .yes3 {
+        width: 1000px;
+        height: 155px;
+    }
+
+    .yes4 {
+        float: left;
+        margin-right: 13px;
+    }
+
+    .yes5 {
+        float: right;
+    }
+
+    .yes6 {
+        width: 1000px;
+        height: 30px;
+    }
+
+    .yes6 a {
+        display: block;
+        text-align: center;
+        width: 200px;
+        height: 30px;
+        text-decoration: none;
+        color: white;
+        float: left;
+        margin: 0 25px;
+    }
+
+    .yes6 li {
+        list-style: none;
+    }
+
+    .pop {
+        width: 100%;
+        height: 669px;
+        margin-bottom: 40px;
+        background-size: contain;
+        background-position: center top;
+        background-image: url(imgs/63d6036d8b95a7b7e9275bde4b494afc.jpg);
+        background-repeat: no-repeat;
+    }
+
+    .pop1 {
+        width: 1000px;
+        height: 669px;
+        margin: auto;
+    }
+
+    .pop2 {
+        padding: 20px 0;
+
+    }
+
+    .pop2 a {
+        display: block;
+        width: 1000px;
+        height: 66px;
+    }
+
+    .pop3 {
+        display: block;
+        width: 1000px;
+        height: 562px;
+    }
+
+    .pop4 {
+        position: relative;
+        top: -52px;
+        width: 1000px;
+        height: 48px;
+        background-color: rgba(43, 39, 39, 0.7);
+    }
+
+    .pop4 a {
+        display: block;
+        width: 1000px;
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        text-align: center;
+        line-height: 48px;
+    }
+
+    .Lefts {
+        position: relative;
+        width: 45px;
+        height: 60px;
+        top: -367px;
+    }
+
+    .Rights {
+        position: relative;
+        width: 45px;
+        height: 60px;
+        top: -427px;
+        left: 955px;
+    }
+
+    .tops {
+        width: 100%;
+        height: 725px;
+    }
+
+    .tops1 {
+        width: 1000px;
+        height: 680.5px;
+        margin: 0 auto;
+    }
+
+    .boxes {
+        width: 1000px;
+        height: 61.5px;
+    }
+
+    .boxes1 {
+        width: 379px;
+        border-bottom: 1px solid rgb(236, 127, 115);
+        float: left;
+        height: 29px;
+    }
+
+    .boxes2 {
+        float: left;
+        margin: 0 20px;
+    }
+
+    .boxes2 a {
+        display: block;
+        width: 202px;
+        height: 61.5px;
+    }
+
+    .boxes3 {
+        float: right;
+        width: 379px;
+        border-bottom: 1px solid rgb(236, 127, 115);
+        height: 29px;
+    }
+
+    .bottom {
+        width: 1057px;
+        height: 91px;
+        position: relative;
+        top: 21px;
+    }
+
+    .bottom1 {
+        width: 1057px;
+    }
+
+    .bottom1 li {
+        list-style: none;
+        font-size: 22px;
+        padding: 8px 0px;
+        width: 118px;
+        float: left;
+        text-align: center;
+        margin-right: 57px;
+
+    }
+
+    .bottom1 a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .bottom1 li:hover a {
+        color: red;
+    }
+
+    .buttom {
+        width: 1000px;
+        height: 488px;
+        margin-top: 50px;
+    }
+
+    .buttom1 {
+        width: 120px;
+        height: 480px;
+        background-color: #ce0000;
+        float: left;
+    }
+
+    .buttom1 li {
+        width: 120px;
+        height: 96px;
+        list-style: none;
+        font-size: 16px;
+    }
+
+    .nb {
+        height: 96px;
+        line-height: 96px;
+    }
+
+    .buttom1 a {
+        display: block;
+        text-align: center;
+        height: 100%;
+        text-decoration: none;
+        color: white;
+        padding: 3px 15px;
+    }
+
+    .buttom1 li:hover {
+        background-color: rgb(253, 101, 100);
+    }
+
+    .buttom2 {
+        width: 862px;
+        height: 480px;
+        float: right;
+    }
+
+    .nba1 {
+        width: 642.5px;
+        height: 480px;
+        background-image: url(imgs/f332b0f0247f4b0babd4dcc67a14b7e5.jpg);
+        background-size: contain;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        float: left;
+    }
+
+    .nbaone {
+        position: relative;
+        width: 642.5px;
+        height: 40px;
+        background-color: rgba(107, 104, 104, 0.5);
+        top: 440px;
+    }
+
+    .nbaone1 {
+        position: relative;
+        border-style: none;
+        top: 10px;
+        left: 20px;
+        width: 600px;
+        float: left;
+    }
+
+    .nbaone2 {
+        position: absolute;
+        width: 582px;
+        height: 40px;
+        top: 0px;
+        left: 50px;
+    }
+
+    .nbaone2 li {
+        list-style: none;
+        font-size: 16px;
+    }
+
+    .nbaone2 a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        width: 582px;
+        line-height: 40px;
+    }
+
+    .nbaone2 a:hover {
+        color: red;
+    }
+
+    .nba2 {
+        width: 203px;
+        height: 149px;
+        background-image: url(imgs/e80a81691cb04a6eb8f47038ad3bcd6c.jpg);
+        background-size: contain;
+        background-position: center top;
+        background-repeat: no-repeat;
+        float: right;
+    }
+
+    .nba3 {
+        width: 203px;
+        height: 149px;
+        background-image: url(imgs/d444cf6db01d4ce2a0806be1f742ea81.jpg);
+        background-size: contain;
+        background-position: center top;
+        background-repeat: no-repeat;
+        float: right;
+        margin-top: 16.5px;
+    }
+
+    .nba4 {
+        width: 203px;
+        height: 149px;
+        background-image: url(imgs/c1e60733195841759fe149833a43a6eb.jpg);
+        background-size: contain;
+        background-position: center top;
+        background-repeat: no-repeat;
+        float: right;
+        margin-top: 16.5px;
+    }
+
+    .nbatwo {
+        position: relative;
+        width: 203px;
+        height: 40px;
+        background-color: rgba(107, 104, 104, 0.5);
+        top: 109px;
+        overflow: hidden;
+    }
+
+    .nbatwo1 {
+        position: relative;
+        border-style: none;
+        top: 10px;
+        left: 20px;
+        width: 203px;
+        float: left;
+    }
+
+    .nbatwo2 {
+        position: absolute;
+        width: 203px;
+        height: 40px;
+        top: 0px;
+        left: 50px;
+    }
+
+    .nbatwo2 li {
+        list-style: none;
+        font-size: 16px;
+    }
+
+    .nbatwo2 a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        width: 203px;
+        line-height: 40px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .nbatwo2 a:hover {
+        color: red;
+    }
+
+    .nbathree {
+        position: relative;
+        width: 203px;
+        height: 40px;
+        background-color: rgba(107, 104, 104, 0.5);
+        top: 109px;
+        overflow: hidden;
+    }
+
+    .nbathree1 {
+        position: relative;
+        border-style: none;
+        top: 10px;
+        left: 20px;
+        width: 203px;
+        float: left;
+    }
+
+    .nbathree2 {
+        position: absolute;
+        width: 203px;
+        height: 40px;
+        top: 0px;
+        left: 50px;
+    }
+
+    .nbathree2 li {
+        list-style: none;
+        font-size: 16px;
+    }
+
+    .nbathree2 a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        width: 203px;
+        line-height: 40px;
+    }
+
+    .nbathree2 a:hover {
+        color: red;
+    }
+
+    .nbafour {
+        position: relative;
+        width: 203px;
+        height: 40px;
+        background-color: rgba(107, 104, 104, 0.5);
+        top: 109px;
+        overflow: hidden;
+    }
+
+    .nbafour1 {
+        position: relative;
+        border-style: none;
+        top: 10px;
+        left: 20px;
+        width: 203px;
+        float: left;
+    }
+
+    .nbafour2 {
+        position: absolute;
+        width: 203px;
+        height: 40px;
+        top: 0px;
+        left: 50px;
+    }
+
+    .nbafour2 li {
+        list-style: none;
+        font-size: 16px;
+    }
+
+    .nbafour2 a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        width: 203px;
+        line-height: 40px;
+    }
+
+    .nbafour2 a:hover {
+        color: #ce0000;
+    }
+
+    .middle {
+        width: 100%;
+        height: 122px;
+    }
+
+    .middle1 {
+        width: 1000px;
+        height: 58.88px;
+        margin: 0 auto;
+    }
+
+    .middle3 {
+        position: relative;
+        width: 1000px;
+        height: 34px;
+        top: 26px;
+    }
+
+    .middle3 li {
+        list-style: none;
+        font-size: 20px;
+        float: left;
+        text-align: center;
+        padding: 4px 49.2px;
+        background-color: rgb(239, 239, 239);
+        margin: 0 8px 0 0;
+    }
+
+    .middle3 a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    .hi {
+
+        width: 100%;
+        height: 258px;
+        margin-top: 13px;
+    }
+
+    .hi1 {
+        width: 1000px;
+        height: 258px;
+        margin: 0 auto;
+    }
+
+    .hi2 {
+        width: 513px;
+        height: 258px;
+        background-image: url(imgs/d22666d90cf84ffc8f2322ecfc57fac7.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        float: left;
+    }
+
+    .hi3 {
+        height: 258px;
+        width: 480px;
+        float: right;
+        border: 1px solid rgb(219, 219, 219);
+    }
+
+    .hi4 {
+        width: 430px;
+        height: 50px;
+        margin: 0 auto;
+    }
+
+    .hi5 {
+        width: 219px;
+        height: 50px;
+        margin: auto;
+        margin-top: 10px;
+    }
+
+    .hi6 {
+        position: relative;
+        width: 430px;
+        height: 78px;
+        margin: 0 auto;
+        top: 10px;
+        color: rgb(91, 91, 91);
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .hi7 {
+        position: relative;
+        top: 16px;
+        width: 430px;
+        height: 97px;
+        padding: 6px 0px;
+        border-top: 1px dashed rgb(192, 192, 192);
+        margin-top: 8px;
+        margin: auto;
+    }
+
+    .hi7s {
+        width: 200px;
+        height: 28px;
+        float: left;
+        margin-left: 10px;
+        margin-top: 2px;
+    }
+
+    .hi7ps a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .hi7ps li {
+        list-style: none;
+    }
+
+    .hello {
+        width: 100%;
+        height: 172px;
+        margin-top: 15px;
+    }
+
+    .hello1 {
+        width: 1000px;
+        height: 172px;
+        margin: auto;
+    }
+
+    .hello2psp {
+        float: left;
+        border: 1px solid rgb(219, 219, 219);
+        margin-right: 10px;
+    }
+
+    .hello2ps a {
+        display: block;
+        width: 129px;
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+    }
+
+    .hello3 a {
+        display: block;
+        width: 294px;
+        height: 171px;
+    }
+
+    .hello3 {
+        height: 171px;
+        float: right;
+    }
+
+    .hello3s {
+        display: block;
+        position: relative;
+        background-color: rgba(43, 39, 39, 0.7);
+        height: 37.9px;
+        width: 295px;
+        top: -40px;
+        font-size: 14px;
+    }
+
+    .hello3s a {
+        display: block;
+        width: 264px;
+        height: 10px;
+        text-decoration: none;
+        color: white;
+        margin-left: 30px;
+    }
+
+    .na {
+        width: 100%;
+        height: 416px;
+        margin-top: 35px;
+    }
+
+    .na1 {
+        width: 1000px;
+        height: 416px;
+        margin: auto;
+    }
+
+    .na2 {
+        display: block;
+        width: 659px;
+        height: 48px;
+        background-color: #E9EDF8;
+        float: left;
+    }
+
+    .na2 a {
+        display: block;
+        text-decoration: none;
+        color: #be271b;
+        height: 48px;
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 48px;
+        margin-left: 20px;
+    }
+
+    .na3 {
+        display: block;
+        width: 329px;
+        height: 48px;
+        background-color: #E9EDF8;
+        float: right;
+    }
+
+    .na3 a {
+        display: block;
+        text-decoration: none;
+        color: #be271b;
+        height: 48px;
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 48px;
+        margin-left: 20px;
+    }
+
+    .na4 {
+        width: 659px;
+        height: 328px;
+        background-color: rgba(255, 247, 235, 1);
+        float: left;
+    }
+
+    .na4 a {
+        display: block;
+        text-decoration: none;
+        color: black;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .na4 li {
+        list-style: none;
+        width: 308px;
+        height: 25px;
+        margin-top: 10px;
+        float: left;
+        font-size: 14px;
+        margin-left: 5px;
+    }
+
+    .na5 {
+        width: 329px;
+        height: 328px;
+        background-color: rgba(255, 247, 235, 1);
+        float: right;
+    }
+
+    .na5 a {
+        display: block;
+        text-decoration: none;
+        color: black;
+    }
+
+    .na5 li {
+        list-style: none;
+        float: left;
+        width: 303px;
+        font-size: 14px;
+        margin-left: 8px;
+        margin-top: 15.9px;
+    }
+
+    .ha {
+        width: 100%;
+        height: 227px;
+        margin-bottom: 20px;
+    }
+
+    .ha1 {
+        width: 1000px;
+        height: 227px;
+        margin: auto;
+    }
+
+    .ha2 {
+        width: 1000px;
+        height: 92px;
+    }
+
+    .ha3 {
+        width: 1000px;
+        height: 125px;
+        margin-top: 10px;
+    }
+
+    .ha4 {
+        width: 234px;
+        height: 125px;
+        background-image: url(imgs/bd867210-3233-4a64-a37c-082bb522cae2.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        float: left;
+        margin-right: 21.5px;
+    }
+
+    .ha5 {
+        width: 234px;
+        height: 125px;
+        background-image: url(imgs/b3138815-1f6d-4106-8c6b-d48133efd186.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        float: left;
+    }
+
+    .ha6 {
+        width: 234px;
+        height: 125px;
+        background-image: url(imgs/76cd7f96-80e1-4ef6-8689-8d3061bc182b.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        float: right;
+        margin-left: 21.5px;
+    }
+
+    .ha7 {
+        width: 234px;
+        height: 125px;
+        background-image: url(imgs/990826b8-2c68-449b-b220-07204f50218d.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        float: right;
+    }
+
+    .curry {
+        width: 100%;
+        height: 694px;
+        background-image: url(imgs/a801aeb8-3aaf-4c8f-9f28-059af5fd391d.png);
+        margin: 0px 0px 40px;
+        padding: 25px 0px 0px;
+        border-radius: 0px;
+        min-height: 0px;
+        background-size: cover;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+    }
+
+    .curry1 {
+        position: relative;
+        margin: auto;
+        width: 1000px;
+        height: 669px;
+        top: 25px;
+    }
+
+    .curry2 {
+        width: 1000px;
+    }
+
+    .curry3 {
+        width: 1000px;
+        height: 556px;
+        margin-top: 20px;
+    }
+
+    .curry4 {
+        width: 150px;
+        height: 556px;
+        background-color: rgb(232, 45, 37);
+        float: left;
+    }
+
+    .curry4 li {
+        width: 150px;
+        height: 140px;
+        list-style: none;
+        font-size: 16px;
+        text-align: center;
+        line-height: 140px;
+        font-size: 24px;
+    }
+
+    .curry4 a {
+        display: block;
+        width: 150px;
+        height: 140px;
+        text-decoration: none;
+        color: white;
+    }
+
+    .curry4 li:hover {
+        background-color: rgb(254, 111, 3);
+    }
+
+    .curry5 {
+        width: 850px;
+        height: 556px;
+        float: right;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        overflow: hidden;
+        background-image: url(imgs/fbddabd0d13c897b462b41332f8a407f.png);
+        min-height: 556px;
+    }
+
+    .curry6 {
+        width: 850px;
+        height: 253px;
+        padding: 170px 0 0;
+    }
+
+    .curry7 {
+        width: 170px;
+        height: 253px;
+        float: left;
+    }
+
+    .curryone {
+        width: 170px;
+        height: 190px;
+        background-image: url(imgs/d2c88f2dc7e735ce47b61cd11f0026f8.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .currytwo {
+        width: 170px;
+        height: 190px;
+        background-image: url(imgs/5461326b45b95078f43a5c7083ba4cdb.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .currythree {
+        width: 170px;
+        height: 190px;
+        background-image: url(imgs/044c8ec62edb4ee4f8e7b975e86ab0ae.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .curryfour {
+        width: 170px;
+        height: 190px;
+        background-image: url(imgs/375834248246aab99fa04d968c7c555b.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .curryfive {
+        width: 170px;
+        height: 190px;
+        background-image: url(imgs/13077097cb3b24a673a68dea90b55a61.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .curry9 {
+        width: 120px;
+        height: 35px;
+        text-align: center;
+        margin-left: 50px;
+        margin-top: 10px;
+    }
+
+    .curry9 a {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+    }
+
+    .curry9 a:hover {
+        color: red;
+    }
+
+    .nice {
+        width: 100%;
+        height: 370px;
+        margin-bottom: 40px;
+    }
+
+    .nice1 {
+        width: 1000px;
+        height: 370px;
+        margin: auto;
+    }
+
+    .nice2 {
+        width: 1000px;
+        height: 67px;
+    }
+
+    .niceone {
+        width: 197px;
+        height: 67px;
+        background-image: url(imgs/646694cb8641a631e2da321e303230d0.png);
+        background-repeat: no-repeat;
+        float: left;
+    }
+
+    .nicetwo {
+        width: 802px;
+        height: 42px;
+        float: right;
+        margin-top: 25px;
+    }
+
+    .nicetwo a {
+        display: block;
+        height: 42px;
+        color: white;
+        text-decoration: none;
+        padding: 0px 58px;
+        line-height: 42px;
+    }
+
+    .nicetwo li {
+        list-style: none;
+        height: 42px;
+        background-color: rgb(230, 1, 3);
+        float: right;
+        font-size: 24px;
+    }
+
+    .nicetwo a:hover {
+        background-color: #ce0000;
+    }
+
+    .nice3 {
+        width: 980px;
+        height: 260px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        overflow: hidden;
+        background-color: rgb(253, 247, 236);
+        padding: 40px 10px 0px 10px;
+    }
+
+    .nice3 a {
+        display: block;
+        width: 312px;
+        height: 37px;
+        text-decoration: none;
+        color: black;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        padding-left: 10px;
+    }
+
+    .nice3 li {
+        list-style: none;
+        float: left;
+        font-size: 16px;
+    }
+
+    .luck {
+        width: 100%;
+        height: 605px;
+        margin-bottom: 40px;
+    }
+
+    .luck1 {
+        width: 1000px;
+        height: 603px;
+        margin: auto;
+    }
+
+    .luck2 {
+        width: 1000px;
+        height: 98px;
+    }
+
+    .luck3 {
+        width: 1000px;
+        height: 42px;
+        border-top: 2px solid #ce0000;
+        background-color: rgb(242, 242, 242);
+        margin-top: 10px;
+    }
+
+    .luck3 a {
+        display: block;
+        font-size: 18px;
+        text-decoration: none;
+        color: #000;
+        padding: 8px 34px;
+        font-size: 18px;
+    }
+
+    .h {
+        margin-left: 10px;
+    }
+
+    .luck3 li {
+        list-style: none;
+        float: left;
+    }
+
+    .luck3 a:hover {
+        background-color: #ce0000;
+        color: white;
+    }
+
+    .luck4 {
+        width: 998px;
+        height: 157px;
+        border: 1px solid rgb(229, 229, 229);
+    }
+
+    .luck5 {
+        width: 998px;
+        height: 105px;
+        margin-top: 10px;
+    }
+
+    .lucky1 {
+        width: 187px;
+        height: 105px;
+        background-image: url(imgs/1daf5edcbf344a689cebbf3619dbf337.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        float: left;
+        margin: 0 6px;
+    }
+
+    .lucky2 {
+        width: 187px;
+        height: 105px;
+        background-image: url(imgs/676a19bf53f84fefa354bdfb7789922b.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        float: left;
+        margin: 0 6px;
+    }
+
+    .lucky3 {
+        width: 187px;
+        height: 105px;
+        background-image: url(imgs/1e352b4a84bf45fd800eba9cac226c15.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        float: left;
+        margin: 0 6px;
+    }
+
+    .lucky4 {
+        width: 187px;
+        height: 105px;
+        background-image: url(imgs/cca7d02703d84bdcb28eb3a486ce1dc5.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        float: left;
+        margin: 0 6px;
+    }
+
+    .lucky5 {
+        width: 187px;
+        height: 105px;
+        background-image: url(imgs/2b04afb5051043ce8d5ff5621f6bf077.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        float: left;
+        margin: 0 6px;
+    }
+
+    .luck6 {
+        width: 998px;
+        height: 20px;
+        float: left;
+        margin-top: 10px;
+    }
+
+    .luck6 a {
+        text-decoration: none;
+        color: black;
+        padding: 0 83.5px;
+    }
+
+    .luck6 li {
+        list-style: none;
+        float: left;
+    }
+
+    .luck6 a:hover {
+        color: red;
+    }
+
+    .luck7 {
+        height: 272px;
+        width: 1000px;
+        margin-top: 20px;
+    }
+
+    .luckily1 {
+        width: 496px;
+        height: 134px;
+        background-image: url(imgs/c18b165bf3e64c41a191dcab3d9beb78.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        float: left;
+    }
+
+    .luckily1 a {
+        display: block;
+        width: 496px;
+        height: 134px;
+    }
+
+    .luckily2 {
+        width: 496px;
+        height: 134px;
+        background-image: url(imgs/62a7421ec8df4e9ba06a7082b914c293.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        float: right;
+    }
+
+    .luckily2 a {
+        display: block;
+        width: 496px;
+        height: 134px;
+    }
+
+    .luckily3 {
+        width: 496px;
+        height: 134px;
+        background-image: url(imgs/a519e80a3b3444aebf9f6f372be4f093.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        float: left;
+        margin-top: 6px;
+    }
+
+    .luckily3 a {
+        display: block;
+        width: 496px;
+        height: 134px;
+    }
+
+    .luckily4 {
+        width: 496px;
+        height: 134px;
+        background-image: url(imgs/44b0dfaabb17471ba3ab2529c3a17233.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        float: right;
+        margin-top: 6px;
+    }
+
+    .luckily4 a {
+        display: block;
+        width: 496px;
+        height: 134px;
+    }
+
+    .good {
+        width: 100%;
+        height: 465px;
+        margin-top: 30px;
+        margin-bottom: 48px;
+    }
+
+    .good1 {
+        width: 1000px;
+        height: 465px;
+        margin: auto;
+    }
+
+    .good2 {
+        width: 167px;
+        height: 451px;
+        float: left;
+    }
+
+    .goodone {
+        width: 167px;
+        height: 67px;
+        background-image: url(imgs/2f1d81327cd58c579f5dd527bf5fe7fe.png);
+        background-repeat: no-repeat;
+        margin-bottom: 46px;
+    }
+
+    .goodtwo {
+        width: 43px;
+        height: 400px;
+    }
+
+    .goodtwo a {
+        display: block;
+        text-decoration: none;
+        color: black;
+        width: 167px;
+        height: 43px;
+        font-size: 26px;
+        margin: 15px 0;
+    }
+
+    .goodtwo li {
+        list-style: none;
+        text-align: right;
+        width: 167px;
+        height: 43px;
+    }
+
+    .goodtwo a:hover {
+        color: red;
+    }
+
+    .good3 {
+        width: 40px;
+        height: 451px;
+        border-right: 2px solid rgb(221, 221, 221);
+        float: left;
+    }
+
+    .good4 {
+        width: 721px;
+        height: 445px;
+        float: right;
+        background-color: rgb(242, 242, 242);
+        padding: 10px 20px 0 10px;
+    }
+
+    .good4 a {
+        display: block;
+        width: 160px;
+        height: 37px;
+        text-decoration: none;
+        color: black;
+
+    }
+
+    .good4 li {
+        list-style: none;
+        width: 160px;
+        height: 37px;
+        float: left;
+        margin: 3px 12px 5px 8px;
+    }
+
+    .good4 li:hover a {
+        color: red;
+    }
+
+    #container6 {
+        width: 100%;
+        height: 468px;
+        margin-top: 20px;
+    }
+
+    .container6 {
+        width: 1000px;
+        height: 468px;
+        margin: auto;
+        margin-top: 15px;
+    }
+
+    .container8 {
+        width: 1000px;
+        height: 84px;
+    }
+
+    .lb {
+        width: 177px;
+        height: 84px;
+        background-image: url(imgs/bd19863611993ad460d1c23fa910fc00.png
+);
+        float: left;
+        margin: auto;
+    }
+
+    .rb {
+        width: 803px;
+        border-top: 1px solid rgb(204, 204, 204);
+        position: relative;
+        top: 40px;
+        left: 86px;
+        margin: auto;
+    }
+
+    .container7 {
+        width: 1000px;
+        height: 371px;
+    }
+
+    .container7 a:hover {
+        color: red;
+    }
+
+    .innerpic {
+        width: 663px;
+        height: 371px;
+        background-image: url(imgs/6278946a91704330bba5f86d6c554936.jpg);
+        float: left;
+        background-size: cover;
+        background-position: center 50%;
+    }
+
+    .rightpic a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .rightpic {
+        width: 288px;
+        height: 35px;
+        font-size: 24px;
+        font-family: "华文中宋";
+        margin-left: 38px;
+        color: black;
+        float: left;
+        margin-top: 19px;
+    }
+
+    .rightpic1 {
+        width: 120px;
+        height: 36px;
+        font-size: 24px;
+        font-family: "华文中宋";
+        margin-left: 38px;
+        color: black;
+        float: left;
+        margin-top: 16px;
+    }
+
+    .rightpic1 a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .rightpic2 {
+        width: 145px;
+        height: 36px;
+        font-size: 24px;
+        font-family: "华文中宋";
+        margin-top: 16px;
+        color: black;
+        float: left;
+    }
+
+    .rightpic2 a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .large {
+        width: 100%;
+    }
+
+    .bbc {
+        width: 100%;
+        height: 520px;
+    }
+
+    .bbc1 {
+        width: 1000px;
+        height: 520px;
+        margin: auto;
+    }
+
+    .bbc2 {
+        width: 1000px;
+        height: 70px;
+    }
+
+    .bbc3 {
+        float: left;
+        width: 167px;
+        height: 67px;
+        background-image: url(imgs/学习科学.png);
+        background-repeat: no-repeat;
+    }
+
+    .bbc4 {
+        width: 810px;
+        float: right;
+        margin-top: 35px;
+    }
+
+    .bbc5 {
+        width: 1000px;
+        height: 440px;
+    }
+
+    .bbc6 {
+        width: 227px;
+        height: 440px;
+        float: left;
+    }
+
+    .bbcs {
+        margin-top: 5px;
+    }
+
+    .bbc8 {
+        width: 485px;
+        height: 405px;
+        float: right;
+        background-color: rgb(62, 119, 190);
+        padding: 35px 20px 0 30px;
+        margin-top: 5px;
+    }
+
+    .bbc8 a {
+        display: block;
+        width: 489px;
+        height: 37px;
+        text-decoration: none;
+        color: white;
+    }
+
+    .bbc8 li {
+        list-style: none;
+        width: 489px;
+        height: 37px;
+        line-height: 37px;
+        margin: 0 0 11px 0;
+    }
+
+    .bbc8 a:hover {
+        color: red;
+    }
+
+    .bbc7 {
+        width: 225px;
+        height: 440px;
+        float: right;
+        margin-top: 5px;
+        background-image: url(imgs/蓝色背景.png);
+    }
+
+    .bbc7 a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        width: 205px;
+        height: 84px;
+        font-size: 26px;
+    }
+
+    .bbc7 li {
+        list-style: none;
+        line-height: 84px;
+        padding-left: 20px;
+        margin: 22px 0;
+    }
+
+    .bbcs2 {
+        width: 225px;
+        height: 50px;
+        transform: rotate(180deg);
+        text-align: center;
+        line-height: 50px;
+    }
+
+    .bbc7 li:hover {
+        background-color: rgb(37, 141, 208);
+    }
+
+    .bbcs1 {
+        width: 225px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .soild {
+        border-top: 1px solid rgb(196, 195, 194);
+    }
+
+    #body {
+        margin: 0 auto;
+        width: 1000px;
+        height: 3000px;
+        background-color: blueviolet;
+        position: relative;
+        /* opacity: 0.55; */
+    }
+
+    #Pe {
+        /*定义了位置*/
+        width: 1000px;
+        height: 410px;
+        /* position: absolute; */
+        bottom: 0;
+        margin: auto;
+    }
+
+    #Pe_h {
+        width: 1000px;
+        height: 67px;
+    }
+
+    .Pe_h_1 {
+        display: block;
+        width: 206px;
+        height: 57px;
+        float: left;
+        margin-right: 10px;
+        border-bottom: 4px solid rgb(175, 170, 170);
+    }
+
+    .Pe_h_1:hover {
+        border-bottom: 4px solid rgb(191, 51, 28);
+    }
+
+    #Pe_s {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        width: 1000px;
+        height: 44px;
+    }
+
+    #Pe_shujia_b {
+        /*定义了位置*/
+        margin-bottom: 40px;
+        width: 100%;
+        min-width: 1024px;
+        height: 236px;
+        background-color: crimson;
+        /* position: absolute; */
+        bottom: -2417px;
+        z-index: -1;
+    }
+
+    #Pe_shujia {
+        position: relative;
+        width: 1000px;
+        height: 237px;
+        background-image: url(imgs/shujia.jpg);
+        background-repeat: no-repeat;
+        top: 6px;
+    }
+
+    #Pe_shu {
+        /*定义了位置*/
+        /* position: absolute; */
+        position: relative;
+        width: 840px;
+        height: 195px;
+        margin-left: 80px;
+        z-index: 100;
+        top: 20px;
+    }
+
+    .shu1 {
+        width: 40px;
+        height: 195px;
+        background-color: darkred;
+        float: left;
+        margin-right: 2px;
+    }
+
+    .shu1:hover {
+        background-color: red;
+    }
+
+    .shu2 {
+        width: 40px;
+        height: 195px;
+        background-color: rgb(9, 124, 170);
+        margin-right: 2px;
+        float: left;
+    }
+
+    .shu2:hover {
+        background-color: skyblue;
+    }
+
+    .shu3 {
+        width: 40px;
+        height: 195px;
+        background-color: darkgoldenrod;
+        margin-right: 2px;
+        float: left;
+    }
+
+    .shu3:hover {
+        background-color: rgb(196, 196, 0);
+    }
+
+    .shu4 {
+        width: 40px;
+        height: 195px;
+        background-color: darkcyan;
+        margin-right: 2px;
+        float: left;
+    }
+
+    .shu4:hover {
+        background-color: cyan;
+    }
+
+    .shu5 {
+        width: 40px;
+        height: 195px;
+        background-color: darkmagenta;
+        margin-right: 2px;
+        float: left;
+    }
+
+    .shu5:hover {
+        background-color: magenta;
+    }
+
+    .shuming {
+        width: 14px;
+        height: 115px;
+        font-size: 14px;
+        text-align: justify;
+        padding-left: 13px;
+        line-height: 16px;
+        color: white;
+    }
+
+    #Pt {
+        width: 1000px;
+        height: 420px;
+        bottom: 430px;
+        margin: auto;
+    }
+
+    #Pt_h {
+        width: 206px;
+        height: 60px;
+        border-bottom: 4px solid rgb(175, 170, 170);
+    }
+
+    #Pt_h:hover {
+        border-bottom: 4px solid rgb(191, 51, 28);
+    }
+
+    #Pt_t {
+        width: 1000px;
+        height: 350px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    #Pt_t a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .Pt_t1 {
+        width: 150px;
+        height: 80px;
+        margin-right: 20px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .Pt_t2 {
+        width: 150px;
+        height: 80px;
+        margin-right: 20px;
+        margin-bottom: 5px;
+    }
+
+    .Pt_t11 {
+        width: 150px;
+        height: 80px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+    .Pt_t12 {
+        width: 150px;
+        height: 80px;
+        margin-bottom: 5px;
+    }
+
+    .FL {
+        float: left;
+    }
+
+    #yesok4 .img1 {
+        width: 150px;
+        height: 40px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    #yesok4 .img2 {
+        width: 90px;
+        height: 40px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    #yesok4 .img3 {
+        width: 80px;
+        height: 50px;
+        margin-bottom: 5px;
+    }
+
+    #Ph {
+        bottom: 890px;
+        width: 1000px;
+        height: 690px;
+        background-image: url(imgs/huanqiu.jpg);
+        margin: auto;
+    }
+
+    #Ph_h {
+        width: 1000px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .Ph_h_span {
+        width: 170px;
+        height: 50px;
+        display: block;
+        color: rgb(211, 0, 0);
+        font-size: 38px;
+        font-weight: 800;
+        line-height: 50px;
+    }
+
+    .Ph_h_span a {
+        text-decoration: none;
+        color: rgb(211, 0, 0);
+    }
+
+    #Ph_c {
+        width: 1000px;
+        height: 333px;
+    }
+
+    #Ph_c_L {
+        width: 264px;
+        height: 333px;
+        float: left;
+    }
+
+    #Ph_c_idul li {
+        margin-top: 14px;
+        width: 264px;
+        height: 69px;
+        line-height: 68px;
+        text-align: center;
+        background-color: rgb(217, 247, 250);
+        opacity: 0.8;
+    }
+
+    #Ph_c_idul li a {
+        width: 264px;
+        height: 69px;
+        display: block;
+        font-size: 26px;
+        color: black;
+    }
+
+    #Ph_c_idul li a:hover {
+        color: white;
+        background-color: skyblue;
+    }
+
+    #Ph_c_R {
+        margin-top: 13px;
+        width: 734px;
+        height: 319px;
+        float: left;
+        opacity: 0.8;
+        background-color: skyblue;
+    }
+
+    #Ph_c_R_L {
+        width: 600px;
+        height: 319px;
+        float: left;
+    }
+
+    #Ph_c_R_R {
+        width: 134px;
+        height: 319px;
+        float: left;
+    }
+
+    .Ph_p {
+        margin-left: 30px;
+        line-height: 36px;
+        font-size: 16px;
+    }
+
+    .Ph_p a {
+        color: black;
+    }
+
+    .Ph_p a:hover {
+        color: red;
+    }
+
+    #Ph_f {
+        width: 1000px;
+        height: 220px;
+        margin-top: 30px;
+    }
+
+    .Ph_f_i {
+        width: 242px;
+        height: 220px;
+        margin-left: 4px;
+        margin-right: 4px;
+        float: left;
+    }
+
+    .Ph_f_p {
+        text-align: center;
+        line-height: 34px;
+        color: white;
+        font-weight: 800;
+        font-size: 24px;
+    }
+
+    .Ph_f_p:hover {
+        color: rgb(211, 0, 0);
+    }
+
+    #Pb {
+        width: 1000px;
+        height: 267px;
+        margin-bottom: 40px;
+        margin: auto;
+    }
+
+    #Pb_h {
+        width: 1000px;
+        height: 35px;
+        margin-bottom: 20px;
+    }
+
+    #Pb_f {
+        width: 1000px;
+        height: 233px;
+        margin-top: 10px;
+    }
+
+    .Pb_p {
+        float: left;
+        margin-left: 120px;
+        line-height: 44px;
+        font-size: 20px;
+        color: black;
+    }
+
+    .Pb_p a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    .pb_h a:hover {
+        color: rgb(211, 0, 0);
+    }
+
+    #Pv {
+        width: 1000px;
+        height: 267px;
+        margin: auto;
+    }
+
+    #Pv_h {
+        width: 1000px;
+        height: 35px;
+        margin-bottom: 20px;
+    }
+
+    #Pv_f {
+        width: 1000px;
+        height: 233px;
+        margin-top: 10px;
+    }
+
+    .Pv_p {
+        float: left;
+        margin-left: 80px;
+        line-height: 44px;
+        font-size: 20px;
+        color: black;
+    }
+
+    .Pv_p a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    #yesok1 {
+        width: 100%;
+        height: 267px;
+        margin-top: 20px;
+    }
+
+    #yesok2 {
+        width: 100%;
+        height: 267px;
+        margin-top: 50px;
+    }
+
+    #yesok3 {
+        width: 100%;
+        height: 690px;
+        margin-top: 20px;
+    }
+
+    #yesok4 {
+        width: 100%;
+        height: 420px;
+        margin-top: 20px;
+    }
+
+    #yesok5 {
+        width: 100%;
+        height: 405px;
+        margin-top: 10px;
+        background-image: url(imgs/bg-2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .yesok {
+        width: 100%;
+        height: 450px;
+        margin: 0px 0px 40px;
+        padding: 20px 0px 40px;
+        border-radius: 0px;
+        min-height: 0px;
+        background-size: cover;
+        background-position: center center;
+        min-width: 1000px;
+        background-image: url(https://boot-img.xuexi.cn/lego/image/1580_grid-xx-culture/04dbd1e6-e99c-4998-bf11-a8be1b440c88.png);
+    }
+
+    .yesok1 {
+        width: 1000px;
+        height: 180px;
+        margin: auto;
+    }
+
+    .yesok2 {
+        width: 1000px;
+        height: 67px;
+        background-image: url(imgs/学习文化.png);
+        background-repeat: no-repeat;
+    }
+
+    .yesok3 {
+        width: 1000px;
+        height: 116px;
+        background-image: url(imgs/b4d91c42f57cc5dd18d10617f30e4243.png);
+        background-repeat: no-repeat;
+    }
+
+    .yesok4 {
+        width: 1230px;
+        height: 187px;
+        margin: auto;
+        background-image: url(imgs/d9592f2e68fb9af41d90ad46f4c48de2.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .yesok5 {
+        position: relative;
+        width: 1000px;
+        height: 80px;
+        margin: auto;
+        background-image: url(imgs/56f019067e916bbf6eb096433de688f9.jpg);
+        background-repeat: no-repeat;
+        top: 10px;
+    }
+
+    .yesoks1 {
+        width: 1000px;
+        height: 135px;
+        margin: auto;
+        padding-top: 27px;
+    }
+
+    .yesoks1 a {
+        display: block;
+        width: 110px;
+        height: 135px;
+        text-decoration: none;
+    }
+
+    .yesoks1 li {
+        text-align: center;
+        width: 110px;
+        height: 135px;
+        float: left;
+    }
+
+    .footer {
+        width: 1000px;
+        height: 440px;
+        padding: 20px 0 0;
+        margin: auto;
+    }
+
+    .footer .links {
+        width: 1000px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        padding: 20px 0;
+        border-radius: 24px;
+        border-bottom: solid 1px #DEDEDE;
+        padding-bottom: 20px;
+        background-color: #fff6ef;
+    }
+
+    .footer .links .links-left {
+        width: 88px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #c00;
+        margin-top: 5px;
+        padding-left: 22px;
+    }
+
+    .footer .links .links-right::before {
+        content: '\200B';
+        position: absolute;
+        left: 0;
+        top: 7px;
+        bottom: 7px;
+        width: 1px;
+        background-color: #DEDEDE;
+    }
+
+    .footer .links .links-right {
+        width: 850px;
+        box-sizing: border-box;
+        position: relative;
+        font-size: 0;
+    }
+
+    .footer .links .links-right a {
+        display: inline-block;
+        color: #111;
+        overflow: hidden;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 25px;
+        line-height: 20px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+
+    .footer .links .links-right a:hover {
+        color: rgb(208, 2, 27);
+    }
+
+    .footer .copyright {
+        margin-top: 27px;
+        text-align: center;
+        color: #111;
+        font-size: 16px;
+        padding-bottom: 10px;
+    }
+
+    .footer .copyright .icon-wrap {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .footer .copyright .icon01 {
+        background-image: url(imgs/5d27b770015be191ed14e8146fcc907e.png);
+        width: 63px;
+        height: 77px;
+    }
+
+    .footer .copyright .icon02 {
+        width: 71px;
+        height: 66px;
+        background-image: url(imgs/f6b99ba9b8314955d8dcf08b3ac85353.png);
+        margin-left: 16px;
+    }
+
+    .footer .copyright .icon01,
+    .footer .copyright .icon02 {
+        display: block;
+    }
+
+    .footer .copyright p.tips {
+        font-size: 14px;
+        color: #979797;
+    }
+
+    .footer .copyright p {
+        margin-top: 10px;
+        margin-bottom: 0;
+        line-height: 21px;
+        font-family: "Microsoft Yahei", "\5FAE\8F6F\96C5\9ED1", sans-serif;
+        letter-spacing: 1px;
+    }
+
+    .footer .copyright .text-link {
+        color: #111;
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <div class="mm mm1">菜单</div>
+    <div class="aa">
+        <ul>
+            <li><a href="https://www.xuexi.cn/dc12897105c8c496d783c5e4d3b680a2/9a75e290b9cf8cb8fb529a6e503db78d.html"
+                    target="_blank">站内搜索</a></li>
+            <li><a href="https://pc.xuexi.cn/points/login.html?ref=https://pc.xuexi.cn/points/my-study.html"
+                    target="_blank">我的学习</a>
+            </li>
+            <li><a href="https://pc.xuexi.cn/points/login.html?ref=https://www.xuexi.cn/9c07fc4cfb37478cb90ba006c911240b/2c4b5bffe40a6b77f03bf5adcd088e38.html"
+                    target="_blank">我的书房</a>
+            </li>
+            <li><a href="https://pc.xuexi.cn/points/login.html?ref=https://pc.xuexi.cn/points/my-points.html"
+                    target="_blank">我的积分</a>
+            </li>
+            <li><a href="https://article.xuexi.cn/haitou/ugc-guide.html" target="_blank">我要投稿</a></li>
+            <li><a href="https://cschat.antcloud.com.cn/index.htm?tntInstId=OFVWPOCN&scene=SCE00004354#/"
+                    target="_blank">建议反馈</a></li>
+        </ul><a href="#top" class="back">回到顶部</a>
+        <div class="qr"></div>
+        <div class="b">下载学习强国app</div>
+        <div class="c">服务电话<br>12361<br>值班电话</div>
+        <div class="d">010-55624303<br>010-55624311</div>
+    </div>
+    <div class="mm mm2"><a href="news.html" target="_blank">新闻速览</a></div>
+    <div class="mm mm3"><a href="study.html" target="_blank">学习天地</a></div>
+    <div class="banner" id="top">
+        <div class="top">
+            <div class="xuexi"><a href="https://xuexi.cn" class="logo"></a>
+                <div class="right"></div>
+            </div>
+        </div>
+        <div class="nav">
+            <div class="menu">
+                <div class="menu-list">
+                    <div class="menu-row"><a
+                            href="https://www.xuexi.cn/cc72a0454287bdedb7e2c156db55e818/71eb7214c6c0c1f5e6ec6e29564decb4.html"
+                            data-locations="0">学习新思想</a><a
+                            href="https://www.xuexi.cn/f997e76a890b0e5a053c57b19f468436/018d244441062d8916dd472a4c6a0a0b.html"
+                            data-locations="1">十九大时间</a><a
+                            href="https://www.xuexi.cn/d184e7597cc0da16f5d9f182907f1200/9a3668c13f6e303932b5e0e100fc248b.html"
+                            data-locations="2">学习理论</a><a
+                            href="https://www.xuexi.cn/482f31e90c481f2161a19ecfcbb91f8b/e6109f421e472b4399b006ba21bc2ecd.html"
+                            data-locations="3">红色中国</a><a
+                            href="https://www.xuexi.cn/896bddc5f57a423b857a85eb40f98945/72742e3e40c96ade71e42b6e7ed42419.html"
+                            data-locations="4">学习科学</a><a
+                            href="https://www.xuexi.cn/261c9a142ef8e6375ed554815a26d585/f2d8ff735982530b7a8c9bb90fa99f68.html"
+                            data-locations="5">环球视野</a></div>
+                    <div class="menu-row"><a
+                            href="https://www.xuexi.cn/5c90534c80d14c060d6683fa960e3676/82573c005c024095037d2186a02244cb.html"
+                            data-locations="6">习近平文汇</a><a
+                            href="https://www.xuexi.cn/0809b8b6ab8a81a4f55ce9cbefa16eff/ae60b027cb83715fd0eeb7bb2527e88b.html"
+                            data-locations="7">学习电视台</a><a
+                            href="https://www.xuexi.cn/f547c0f321ac9a0a95154a21485a29d6/1cdd8ef7bfc3919650206590533c3d2a.html"
+                            data-locations="8">学习慕课</a><a
+                            href="https://www.xuexi.cn/b069a45c80585e78b558c64306bfdf92/53194398355c363c5c635c74a70c7b45.html"
+                            data-locations="9">学习文化</a><a
+                            href="https://www.xuexi.cn/a9d25ec4ca996c6100d2982d33a1d8b2/4f02a12dd5663651422f5c55e10ef19e.html"
+                            data-locations="10">强军兴军</a><a
+                            href="https://www.xuexi.cn/b51582609167f915bcd0f5532daee48d/778eae63fed91ff4c54dc15f22c7fc31.html"
+                            data-locations="11">美丽中国</a></div>
+                </div>
+                <div class="login"><a class="icon search-icon"
+                        href="https://www.xuexi.cn/dc12897105c8c496d783c5e4d3b680a2/9a75e290b9cf8cb8fb529a6e503db78d.html"
+                        target="_blank" data-target="搜索"></a><a
+                        href="https://pc.xuexi.cn/points/login.html?ref=https%3A%2F%2Fwww.xuexi.cn%2Findex.html"
+                        target="_blank" class="icon login-icon"></a></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="title">
+            <h1>学习天地</h1>
+        </div>
+        <div class="great">
+            <div class="great1">
+                <div class="great2"><a href="#">全国学习平台展播</a></div>
+                <div class="great3">
+                    <div class="great5">
+                        <div class="great4"><a href="#"><img src="imgs/f93c5371f0424befb3e6dde888e88308.jpg"
+                                    style="border-radius: 12px 0 0 12px;" alt="" width="186" height="110"></a>
+                        </div>
+                        <div class="great4"><a href="#"><img src="imgs/24d0e279e2f8efd4cbb66dc3c57d6c97.jpg" alt=""
+                                    width="186" height="110"></a></div>
+                        <div class="great4"><a href="#"><img src="imgs/c09d074d910d4cd94b6a3ca8782376be.jpg" alt=""
+                                    width="186" height="110"></a></div>
+                        <div class="great6"><a href="#"><img src="imgs/bbd7ce39-0daf-4470-926b-1b8f2fe144cd.png"
+                                    style="border-radius: 0 12px 12px 0;" alt="" width="186" height="110"></a>
+                        </div>
+                    </div>
+                    <div class="great7">
+                        <li><a href="#">中国科学院学习平台</a></li>
+                        <li class="great8"><a href="#">新疆学习平台</a></li>
+                        <li class="great8"><a href="#">新疆兵团学习平台</a></li>
+                        <li class="great8"><a href="#">中央企业学习平台</a></li>
+                    </div>
+                </div>
+                <div class="greats1">
+                    <div class="greats2">
+                        <div class="greats3"><a href="#"><img src="imgs/382d71dc52ecc1627cf18bc878f65f25.png"
+                                    alt=""></a>
+                        </div>
+                    </div>
+                    <div class="greats4">
+                        <li><a href="#">论坚持和发展中国特色社会主义</a></li>
+                        <li><a href="#">论中国梦</a></li>
+                        <li><a href="#">论马克思</a></li>
+                        <li><a href="#">论坚定理想信念</a></li>
+                        <li><a href="#">论中国精神</a></li>
+                        <li><a href="#">论“五位一体”和“四个全面”</a></li>
+                        <li><a href="#">论“四个自信”</a></li>
+                        <li><a href="#">论全面建成小康社会</a></li>
+                        <li><a href="#">论全面深化改革</a></li>
+                        <li><a href="#">论全面依法治国</a></li>
+                        <li><a href="#">论全面从严治党</a></li>
+                        <li><a href="#">论经济建设</a></li>
+                        <li><a href="#">论新发展理念</a></li>
+                        <li><a href="#">论经济新常态与供给侧结构性改革</a></li>
+                        <li><a href="#">论“三农”工作和乡村振兴战略</a></li>
+                        <li><a href="#">论海洋强国</a></li>
+                    </div>
+                </div>
+                <div class="greats5">
+                    <div class="greatss1"><a href="#"><img src="imgs/3918e6cd24bd8e9e05b8312e381bd3ad.png" alt=""></a>
+                    </div>
+                    <div class="greatss1"><a href="#"><img src="imgs/8c3fa29f831c71f158366a511ee2fdf5.png" alt=""></a>
+                    </div>
+                    <div class="greatss"><a href="#"><img src="imgs/fce20f69df075504a9488a76a5ebd7b2.png" alt=""></a>
+                    </div>
+                    <div class="greatss"><a href="#"><img src="imgs/429da374a7018aab1d4811fa0399b1a0.png" alt=""></a>
+                    </div>
+                    <div class="greatss"><a href="#"><img src="imgs/084aa383966629d7a3815794986bccf4.png" alt=""></a>
+                    </div>
+                    <div class="greatss"><a href="#"><img src="imgs/256e0242832f4d3f649695189f2fd3c3.png" alt=""></a>
+                    </div>
+                    <div class="greatss"><a href="#"><img src="imgs/326d6b4d97d7cffbc4e9045b328c7c24.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yes">
+            <div class="yes1">
+                <div class="yes2">
+                    <div class="yes3">
+                        <div class="yes4"><a href="#"><img src="imgs/3475ba2a3f6b9e1d06372efd7831356a.gif" alt=""
+                                    width="240" height="155"></a>
+                        </div>
+                        <div class="yes4"><a href="#"><img src="imgs/bf65ae34be9ced77d5ff807b9f53da6d.gif" alt=""
+                                    width="240" height="155"></a>
+                        </div>
+                        <div class="yes4"><a href="#"><img src="imgs/6137544367b2593bee6d82f3d10c5e90.gif" alt=""
+                                    width="240" height="155"></a>
+                        </div>
+                        <div class="yes5"><a href="#"><img src="imgs/d89b441c22b1c3cf7cfc44696f1bcca2.gif" alt=""
+                                    width="240" height="155"></a>
+                        </div>
+                    </div>
+                    <div class="yes6">
+                        <li><a href="#">新闻联播</a></li>
+                        <li><a href="#">党报党刊大阅读</a></li>
+                        <li><a href="#">电台电视台大联播</a></li>
+                        <li><a href="#">网站大浏览</a></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pop">
+            <div class="pop1">
+                <div class="pop2"><a href="#"><img src="imgs/50214eba7cb1b64800e6c76fe8b0bf5b.png" alt=""></a>
+                </div>
+                <div class="pop3"><a href="#"><img src="imgs/5887c168a4234911b311b8f88bf8db64.jpg" alt="" width="1000"
+                            height="562" style="border-radius: 24px;">
+                        <div class="pop4" style="border-radius: 0 0 24px 24px;"><a
+                                href="#">中国共产党第十九届中央委员会第五次全体会议在北京举行</a>
+                        </div>
+                        <div class="Lefts"><a href="#"><img src="imgs/imgMenuL.png" alt="" width="45" height="60"></a>
+                        </div>
+                        <div class="Rights"><a href="#"><img src="imgs/imgMenuR.png" alt="" width="45" height="60"></a>
+                        </div>
+                    </a></div>
+            </div>
+        </div>
+        <div class="tops">
+            <div class="tops1">
+                <div class="boxes">
+                    <div class="boxes1"></div>
+                    <div class="boxes2"><a href="#"><img src="imgs/578727faa69c588fa841f60bd56733c5.png" alt=""
+                                width="202" height="59"></a></div>
+                    <div class="boxes3"></div>
+                </div>
+                <div class="bottom">
+                    <ul class="bottom1">
+                        <li><a href="#">第一频道</a></li>
+                        <li><a href="#">理论频道</a></li>
+                        <li><a href="#">党史频道</a></li>
+                        <li><a href="#">教育频道</a></li>
+                        <li><a href="#">人物频道</a></li>
+                        <li><a href="#">文艺频道</a></li>
+                        <li><a href="#">科技频道</a></li>
+                        <li><a href="#">自然频道</a></li>
+                        <li><a href="#">影视频道</a></li>
+                        <li><a href="#">法制频道</a></li>
+                        <li><a href="#">军事频道</a></li>
+                    </ul>
+                </div>
+                <div class="buttom">
+                    <div class="buttom1">
+                        <li><a href="#"><br>重要活动视频专辑</a></li>
+                        <li><a href="#"><br>学习专题报道</a></li>
+                        <li class="nb"><a href="#">学习新视界</a></li>
+                        <li class="nb"><a href="#">十九大报告</a></li>
+                        <li class="nb"><a href="#">新闻联播</a></li>
+                    </div>
+                    <div class="buttom2">
+                        <div class="nba1"><a href="#">
+                                <div class="nbaone">
+                                    <div class="nbaone1"><img src="imgs/e09f433c6916488876d1e34381c98f58.png" alt=""
+                                            width="20" height="20"></div>
+                                    <div class="nbaone2"><a href="#">中央经济工作会议在北京举行 习近平作重要讲话</a></div>
+                                </div>
+                            </a></div>
+                        <div class="nba2"><a href="#">
+                                <div class="nbatwo">
+                                    <div class="nbatwo1"><img src="imgs/e09f433c6916488876d1e34381c98f58.png" alt=""
+                                            width="20" height="20"></div>
+                                    <div class="nbatwo2"><a href="#">中央军委举行晋升……上将军衔警衔仪式 习近平颁发命令状并向晋衔的军官警官表示祝贺</a></div>
+                                </div>
+                            </a></div>
+                        <div class="nba3"><a href="#">
+                                <div class="nbathree">
+                                    <div class="nbathree1"><img src="imgs/e09f433c6916488876d1e34381c98f58.png" alt=""
+                                            width="20" height="20">
+                                    </div>
+                                    <div class="nbathree2"><a href="#">习近平向法国总统……致慰问电</a></div>
+                                </div>
+                            </a></div>
+                        <div class="nba4"><a href="#">
+                                <div class="nbafour">
+                                    <div class="nbafour1"><img src="imgs/e09f433c6916488876d1e34381c98f58.png" alt=""
+                                            width="20" height="20">
+                                    </div>
+                                    <div class="nbafour2"><a href="#">中央军委主席习近……平签署命令发布新修订的《军队计量条例》</a></div>
+                                </div>
+                            </a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="middle1">
+                <div class="middle2"><a href="#"><img src="imgs/entryTitle.png" alt="" width="1000" height="59"></a>
+                </div>
+                <div class="middle3">
+                    <ul class="middle3plus">
+                        <li><a href="#">听原著</a></li>
+                        <li><a href="#">听法律</a></li>
+                        <li><a href="#">听党规</a></li>
+                        <li><a href="#">听科技</a></li>
+                        <li><a href="#">听健康</a></li>
+                        <li><a href="#">听文化</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="hi">
+            <div class="hi1">
+                <div class="hi2" style="border-radius: 0 0 0 0;"></div>
+                <div class="hi3" style="border-radius: 0 0 0 0;">
+                    <div class="hi4">
+                        <div class="hi5"><img src="imgs/fba371f95f64449da5968464f292d8cf.png" alt="" width="219"
+                                height="50">
+                        </div>
+                    </div>
+                    <div class="hi6">《每日读报》今日关注点：1.双腿残疾、不等不靠，熊文达——铆足一股劲 苦干脱了贫；2.空军某旅提前统计官兵待产家属预产期等情况，尽量让官兵回家见证孩子出生；3....
+                    </div>
+                    <div class="hi7">
+                        <div class="hi7s">
+                            <div class="hi7ps"><a href="#"><img src="imgs/gray-icon.png" alt="" width="16" height="16">
+                                    每日读报|12月17日</a></div>
+                        </div>
+                        <div class="hi7s">
+                            <div class="hi7ps"><a href="#"><img src="imgs/gray-icon.png" alt="" width="16" height="16">
+                                    每日读报|12月16日</a></div>
+                        </div>
+                        <div class="hi7s">
+                            <div class="hi7ps"><a href="#"><img src="imgs/gray-icon.png" alt="" width="16" height="16">
+                                    每日读报|12月15日</a></div>
+                        </div>
+                        <div class="hi7s">
+                            <div class="hi7ps"><a href="#"><img src="imgs/gray-icon.png" alt="" width="16" height="16">
+                                    每日读报|12月14日</a></div>
+                        </div>
+                        <div class="hi7s">
+                            <div class="hi7ps"><a href="#"><img src="imgs/gray-icon.png" alt="" width="16" height="16">
+                                    每日读报|12月11日</a></div>
+                        </div>
+                        <div class="hi7s">
+                            <div class="hi7ps"><a href="#"><img src="imgs/gray-icon.png" alt="" width="16" height="16">
+                                    每日读报|12月10日</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hello">
+            <div class="hello1">
+                <div class="hello2">
+                    <div class="hello2psp" style="border-radius: 0 0 0 0px;">
+                        <div class="hello2s"><a href="#"><img src="imgs/ca8981534ae1473b89e6b342f11b556b.jpg" alt=""
+                                    width="129" height="129"></a></div>
+                        <div class="hello2ps"><a href="#">听理论</a></div>
+                    </div>
+                    <div class="hello2psp">
+                        <div class="hello2s"><a href="#"><img src="imgs/49e2750ec6cb45efb2b0f750e6749583.jpg" alt=""
+                                    width="129" height="129"></a></div>
+                        <div class="hello2ps"><a href="#">听音乐</a></div>
+                    </div>
+                    <div class="hello2psp">
+                        <div class="hello2s"><a href="#"><img src="imgs/885fa7a94f79446197eb84fa3a65b50b.jpg" alt=""
+                                    width="129" height="129"></a></div>
+                        <div class="hello2ps"><a href="#">听广播剧</a></div>
+                    </div>
+                    <div class="hello2psp">
+                        <div class="hello2s"><a href="#"><img src="imgs/2c38d89a04d5410e9f43607825b9542f.jpg" alt=""
+                                    width="129" height="129"></a></div>
+                        <div class="hello2ps"><a href="#">听诗文</a></div>
+                    </div>
+                    <div class="hello2psp">
+                        <div class="hello2s"><a href="#"><img src="imgs/98d42cbde614419ba535272868ea793f.png" alt=""
+                                    width="129" height="129"></a></div>
+                        <div class="hello2ps"><a href="#">云听</a></div>
+                    </div>
+                </div>
+                <div class="hello3"><a href="#"><img src="imgs/59c86fa5630c45b49914f7987a019845.jpg" alt="" width="295"
+                            height="169" style="border-radius: 0 0 0px 0;">
+                        <div class="hello3s" style="border-radius: 0 0 0px 0;"><a href="#">做一个战士
+                            </a></div>
+                    </a></div>
+            </div>
+        </div>
+        <div class="na">
+            <div class="na1">
+                <div class="na2"><a href="#">学习理论</a></div>
+                <div class="na3"><a href="#">文化广场</a></div>
+                <div class="na4">
+                    <ul>
+                        <li><a href="#">坚持系统观念谋划推动“十四五”经济社会发展</a></li>
+                        <li><a href="#">激发各类市场主体活力</a></li>
+                        <li><a href="#">以推动高质量发展为主题</a></li>
+                        <li><a href="#">在法治轨道上推进国家治理体系和治理能力现代化</a></li>
+                        <li><a href="#">把制造业做实做强做优 坚定不移建设制造强国</a></li>
+                        <li><a href="#">新时代党的意识形态工作的指导纲领</a></li>
+                        <li><a href="#">加快建设高素质高颜值现代化国际化城市</a></li>
+                        <li><a href="#">以新发展理念引领全面建设社会主义现代化国家新阶段</a></li>
+                        <li><a href="#">努力改善人民生活品质</a></li>
+                        <li><a href="#">激发全民族文化创新创造活力</a></li>
+                        <li><a href="#">县级融媒体中心是基层社会治理的重要抓手</a></li>
+                        <li><a href="#">促进金融更好服务构建新发展格局</a></li>
+                        <li><a href="#">为构建新发展格局提供科技支撑</a></li>
+                        <li><a href="#">加强对农村资源市场化开发利用</a></li>
+                        <li><a href="#">黄河文化是中华文化的源头和象征</a></li>
+                        <li><a href="#">构建新发展格局的战略意蕴与江苏担当</a></li>
+                        <li><a href="#">自尊自信才能走好自己的路</a></li>
+                        <li><a href="#">深刻理解“我国发展仍然处于重要战略机遇期”</a></li>
+                    </ul>
+                </div>
+                <div class="na5">
+                    <ul>
+                        <li><a href="#">漠河的冰雪</a></li>
+                        <li><a href="#">牵挂</a></li>
+                        <li><a href="#">一心一意是三明</a></li>
+                        <li><a href="#">每日一读|铁圈</a></li>
+                        <li><a href="#">霞浦的美丽事业</a></li>
+                        <li><a href="#">《山花》情缘</a></li>
+                        <li><a href="#">每日一读|爸爸们的沧桑</a></li>
+                        <li><a href="#">太行山上挂金伞——河北阜平扶贫纪事</a></li>
+                        <li><a href="#">每日一读|两位学者的选择</a></li>
+                    </ul>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="ha">
+            <div class="ha1">
+                <div class="ha2"><a href="#"><img src="imgs/9525eb23-184e-4fe9-8ce5-909d5080163b.png" alt=""
+                            style="border-radius: 12px 12px 12px 12px;"></a></div>
+                <div class="ha3">
+                    <div class="ha4" style="border-radius: 12px 0 0 12px;"><a href="#"></a></div>
+                    <div class="ha5"><a href="#"></a></div>
+                    <div class="ha6" style="border-radius: 0 12px 12px 0;"><a href="#"></a></div>
+                    <div class="ha7"><a href="#"></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="curry">
+            <div class="curry1">
+                <div class="curry2"><a href="#"><img src="imgs/853a7913e511c0ee14169ae88116646b.png" alt="" height="89"
+                            width="206"></a></div>
+                <div class="curry3">
+                    <div class="curry4">
+                        <li><a href="#">永远的丰碑</a></li>
+                        <li><a href="#">经典著作</a></li>
+                        <li><a href="#">红色记忆</a></li>
+                        <li><a href="#">党史学习</a></li>
+                    </div>
+                    <div class="curry5">
+                        <div class="curry6">
+                            <div class="curry7">
+                                <div class="curryone"><a href="#"></a></div>
+                                <div class="curry9"><a href="#">点击阅读</a></div>
+                            </div>
+                            <div class="curry7">
+                                <div class="currytwo"><a href="#"></a></div>
+                                <div class="curry9"><a href="#">点击阅读</a></div>
+                            </div>
+                            <div class="curry7">
+                                <div class="currythree"><a href="#"></a></div>
+                                <div class="curry9"><a href="#">点击阅读</a></div>
+                            </div>
+                            <div class="curry7">
+                                <div class="curryfour"><a href="#"></a></div>
+                                <div class="curry9"><a href="#">点击阅读</a></div>
+                            </div>
+                            <div class="curry7">
+                                <div class="curryfive"><a href="#"></a></div>
+                                <div class="curry9"><a href="#">点击阅读</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nice">
+            <div class="nice1">
+                <div class="nice2">
+                    <div class="niceone"></div>
+                    <div class="nicetwo">
+                        <li><a href="#">调查研究论</a></li>
+                        <li><a href="#">调研与写作方法谈</a></li>
+                        <li><a href="#">调研成果选</a></li>
+                    </div>
+                </div>
+                <div class="nice3">
+                    <li><a href="#">如何做好请示件办理工作？</a></li>
+                    <li><a href="#">在调查研究中提高本领——读《陈云与调查研究》有感</a></li>
+                    <li><a href="#">提高调查研究能力的四种方法</a></li>
+                    <li><a href="#">写好请示件，谨防这“六个坑”</a></li>
+                    <li><a href="#">练好调查研究基本功</a></li>
+                    <li><a href="#">“五个突出”提升信息工作参谋辅政水平</a></li>
+                    <li><a href="#">工作总结怎么写？把握好这三个原则和三个基本点</a></li>
+                    <li><a href="#">如何克服重“调”轻“研”？</a></li>
+                    <li><a href="#">学习时报：把调查研究作为做好工作的基本功</a></li>
+                    <li><a href="#">掌握6个技巧 让文稿更具“说服力”</a></li>
+                    <li><a href="#">到群众中去到实践中去 着力提高年轻干部调查研究能力</a></li>
+                    <li><a href="#">青平：调查研究是做好工作的基本功</a></li>
+                    <li><a href="#">《陈云手迹故事》： 用好调查研究这个“利器”</a></li>
+                    <li><a href="#">调查研究当“拜人民为师，向人民学习”</a></li>
+                    <li><a href="#">写文稿不妨“多存芝麻好打油”</a></li>
+                    <li><a href="#">一篇合格文稿如何出炉？</a></li>
+                    <li><a href="#">夯实调查研究的基本功</a></li>
+                    <li><a href="#">干工作就得搞好调查研究</a></li>
+                    <li><a href="#">听四位党员干部讲述“在全党大兴调查研究之风”的实践故事—— 扑下身子，沉到一线，在深入调研中解民忧暖民心</a></li>
+                    <li><a href="#">写公文不妨学学“拾穗子”</a></li>
+                    <li><a href="#">求是网评论员：把论文写在祖国大地上</a></li>
+                </div>
+            </div>
+        </div>
+        <div class="luck">
+            <div class="luck1">
+                <div class="luck2"><a href="#"><img src="imgs/a9be7e6de6b44f5cac03d3ecd8b28501.png" alt="" width="231"
+                            height="98"></a></div>
+                <div class="luck3">
+                    <li><a href="#">教育新闻</a></li>
+                    <li class="h"><a href="#">思政与德育</a></li>
+                    <li class="h"><a href="#">校园风采</a></li>
+                    <li class="h"><a href="#">教师</a></li>
+                    <li class="h"><a href="#">青春之歌</a></li>
+                    <li class="h"><a href="#">大课堂</a></li>
+                    <li class="h"><a href="#">练习题</a></li>
+                </div>
+                <div class="luck4">
+                    <div class="luck5">
+                        <div class="lucky1"><a href="#"></a></div>
+                        <div class="lucky2"><a href="#"></a></div>
+                        <div class="lucky3"><a href="#"></a></div>
+                        <div class="lucky4"><a href="#"></a></div>
+                        <div class="lucky5"><a href="#"></a></div>
+                    </div>
+                    <div class="luck6">
+                        <li><a href="#">语文</a></li>
+                        <li><a href="#">数学</a></li>
+                        <li><a href="#">英语</a></li>
+                        <li><a href="#">物理</a></li>
+                        <li><a href="#">化学</a></li>
+                    </div>
+                </div>
+                <div class="luck7">
+                    <div class="luckily1" style="border-radius: 24px 0 0 0;"><a href="#"></a></div>
+                    <div class="luckily2" style="border-radius: 0 24px 0 0;"><a href="#"></a></div>
+                    <div class="luckily3" style="border-radius: 0 0 0 24px;"><a href="#"></a></div>
+                    <div class="luckily4" style="border-radius: 0 0 24px 0;"><a href="#"></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="good">
+            <div class="good1">
+                <div class="good2">
+                    <div class="goodone"><a href="#"></a></div>
+                    <div class="goodtwo">
+                        <li><a href="#">共和国荣光</a></li>
+                        <li><a href="#">最美奋斗者</a></li>
+                        <li><a href="#">新时代楷模</a></li>
+                        <li><a href="#">“双百”人物</a></li>
+                        <li><a href="#">道德模范</a></li>
+                        <li><a href="#">改革先锋</a></li>
+                    </div>
+                </div>
+                <div class="good3"></div>
+                <div class="good4">
+                    <li><a href="#">钟南山</a></li>
+                    <li><a href="#">张伯礼</a></li>
+                    <li><a href="#">张定宇</a></li>
+                    <li><a href="#">陈薇</a></li>
+                    <li><a href="#">于敏</a></li>
+                    <li><a href="#">申纪兰</a></li>
+                    <li><a href="#">孙家栋</a></li>
+                    <li><a href="#">李延年</a></li>
+                    <li><a href="#">张富清</a></li>
+                    <li><a href="#">袁隆平</a></li>
+                    <li><a href="#">黄旭华</a></li>
+                    <li><a href="#">屠呦呦</a></li>
+                    <li><a href="#">叶培建</a></li>
+                    <li><a href="#">吴文俊</a></li>
+                    <li><a href="#">南仁东</a></li>
+                    <li><a href="#">顾方舟</a></li>
+                    <li><a href="#">程开甲</a></li>
+                    <li><a href="#">于漪</a></li>
+                    <li><a href="#">卫兴华</a></li>
+                    <li><a href="#">高铭暄</a></li>
+                    <li><a href="#">王蒙</a></li>
+                    <li><a href="#">秦怡</a></li>
+                    <li><a href="#">郭兰英</a></li>
+                    <li><a href="#">艾热提·马木提</a></li>
+                    <li><a href="#">申亮亮</a></li>
+                    <li><a href="#">麦贤得</a></li>
+                    <li><a href="#">张超</a></li>
+                    <li><a href="#">王文教</a></li>
+                    <li><a href="#">王有德</a></li>
+                    <li><a href="#">王启民</a></li>
+                    <li><a href="#">王继才</a></li>
+                    <li><a href="#">布茹玛汗·毛勒朵</a></li>
+                    <li><a href="#">朱彦夫</a></li>
+                    <li><a href="#">李保国</a></li>
+                    <li><a href="#">都贵玛</a></li>
+                    <li><a href="#">高德荣</a></li>
+                    <li><a href="#">热地</a></li>
+                    <li><a href="#">李道豫</a></li>
+                    <li><a href="#">董建华</a></li>
+                    <li><a href="#">樊锦诗</a></li>
+                </div>
+            </div>
+        </div>
+        <div class="yesok">
+            <div class="yesok1">
+                <div class="yesok2"></div>
+                <div class="yesok3"></div>
+            </div>
+            <div class="yesok4">
+                <div class="yesoks1">
+                    <li><a href="#"><img src="imgs/中国灯谜.png" alt=""></a></li>
+                    <li><a href="#"><img src="imgs/中国建筑.png" alt=""></a></li>
+                    <li><a href="#"><img src="imgs/中国文学.png" alt=""></a></li>
+                    <li><a href="#"><img src="imgs/eade9ae3d4c3ff1668e3828a2a4fe3a0.png" alt=""></a></li>
+                    <li><a href="#"><img src="imgs/f67d65f4e1f01e29571045df752a8c1d.png" alt=""></a></li>
+                    <li><a href="#"><img src="imgs/a645a36cf744d3dd98be6df8562ee225.png" alt=""></a></li>
+                    <li><a href="#"><img src="imgs/318619d42a5105fe8d4bc0fc878d1af6.png" alt=""></a></li>
+                    <li><a href="#"><img src="imgs/5dba0ef4e297e5f9c88b0b5d3d492223.png" alt=""></a></li>
+                    <li><a href="#"><img src="imgs/2cdd9e6dd185dddcf1b1fed77d72d791.png" alt=""></a></li>
+                </div>
+            </div>
+            <div class="yesok5"></div>
+        </div>
+        <div class="bbc">
+            <div class="bbc1">
+                <div class="bbc2">
+                    <div class="bbc3"></div>
+                    <div class="bbc4" style="border-top: 1px solid rgb(196, 195, 194); top: 0px;"></div>
+                </div>
+                <div class="bbc5">
+                    <div class="bbc6">
+                        <div class="bbcs"><a href="#"><img src="imgs/国家工程.png" alt=""></a></div>
+                        <div class="bbcs"><a href="#"><img src="imgs/大国工匠.png" alt=""></a></div>
+                        <div class="bbcs"><a href="#"><img src="imgs/十万个为什么.png" alt=""></a></div>
+                    </div>
+                    <div class="bbc7">
+                        <div class="bbcs1"><img src="imgs/上箭头.png" alt=""></div>
+                        <li><a href="#">科技新闻</a></li>
+                        <li><a href="#">科技思想研究</a></li>
+                        <li><a href="#">5G时代</a></li>
+                        <div class="bbcs2"><img src="imgs/上箭头.png" alt=""></div>
+                    </div>
+                    <div class="bbc8">
+                        <li><a href="#">第二届中国出版业知识服务大会聚焦出版融合</a></li>
+                        <li><a href="#">长征八号首秀缘何推迟？原来是高空风捣乱</a></li>
+                        <li><a href="#">主动脉夹层治疗技术获重要突破 惠及每年五万发病患者</a></li>
+                        <li><a href="#">超9万亿立方米！第二次青藏科考初步摸清亚洲水塔水量</a></li>
+                        <li><a href="#">《飞吧 嫦娥》 第5集</a></li>
+                        <li><a href="#">中国航天科工三院：159厂轻舟机器人实现5G技术应用</a></li>
+                        <li><a href="#">《新时代的中国能源发展》白皮书发布</a></li>
+                        <li><a href="#">全国人大常委会法工委：明年拟修改科学技术进步法</a></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="container6">
+            <div class="container6">
+                <div class="container8">
+                    <div class="lb"></div>
+                    <div class="rb"></div>
+                </div>
+                <div class="container7">
+                    <div class="innerpic"></div>
+                    <div class="rightpic"><a href="#">习近平论强军兴军</a></div>
+                    <div class="rightpic"><a href="#">习近平强军思想研究</a></div>
+                    <div class="rightpic1"><a href="#">强军时评</a></div>
+                    <div class="rightpic2"><a href="#">统帅与军官</a></div>
+                    <div class="rightpic1"><a href="#">三军风采</a></div>
+                    <div class="rightpic2"><a href="#">军中英模</a></div>
+                    <div class="rightpic1"><a href="#">学习军史</a></div>
+                    <div class="rightpic2"><a href="#">古代军史知识</a></div>
+                    <div class="rightpic1"><a href="#">兵器大观</a></div>
+                    <div class="rightpic2"><a href="#">军事著作</a></div>
+                    <div class="rightpic1"><a href="#">中国军视</a></div>
+                </div>
+            </div>
+        </div>
+        <div id="yesok1">
+            <div id="Pb">
+                <div id="Pb_h">
+                    <a href="#"><img style="float: left;" src="imgs/beauty.png"></a>
+                    <p class="Pb_p"><a href="#">走遍中国</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#">国家历史文化名城</a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#">中国历史名镇名村</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+                            href="#">中国历史文化街区</a></p>
+                </div>
+                <div id="Pb_f">
+                    <a href="#"><img style="width: 242px;height: 167px;margin-right: 5px;" src="imgs/b1.jpg"></a>
+                    <a href="#"><img style="width: 242px;height: 167px;margin-right: 5px;" src="imgs/b2.jpg"></a>
+                    <a href="#"><img style="width: 242px;height: 167px;margin-right: 5px;" src="imgs/b3.jpg"></a>
+                    <a href="#"><img style="width: 242px;height: 167px;" src="imgs/b4.jpg"></a>
+                </div>
+            </div>
+        </div>
+        <div id="yesok2">
+            <div id="Pv">
+                <div id="Pv_h">
+                    <a href="#"><img style="float: left;margin-top: -50px;" src="imgs/viwe.png"></a>
+                    <p class="Pv_p"><a href="#">中国相册</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#">最美中国</a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#">最美中国人</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+                            href="#">历史瞬间</a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#">图片故事</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="#">画报中国</a>
+                    </p>
+                </div>
+                <div id="Pv_f">
+                    <a href="#"><img style="width: 242px;height: 167px;margin-right: 5px;" src="imgs/v1.jpg"></a>
+                    <a href="#"><img style="width: 242px;height: 167px;margin-right: 5px;" src="imgs/v2.jpg"></a>
+                    <a href="#"><img style="width: 242px;height: 167px;margin-right: 5px;" src="imgs/v3.jpg"></a>
+                    <a href="#"><img style="width: 242px;height: 167px;" src="imgs/v4.jpg"></a>
+                </div>
+            </div>
+        </div>
+        <div id="yesok3">
+            <div id="Ph">
+                <div id="Ph_h">
+                    <span class="Ph_h_span"><a href="#">环球视野</a></span>
+                </div>
+                <div id="Ph_c">
+                    <div id="Ph_c_L">
+                        <ul id="Ph_c_idul">
+                            <li>
+                                <a href="#">习近平外交思想研究</a>
+                            </li>
+                            <li>
+                                <a href="#">世界眼中的习近平</a>
+                            </li>
+                            <li>
+                                <a href="#">国际问题研究</a>
+                            </li>
+                            <li>
+                                <a href="#">世界文明研究</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="Ph_c_R">
+                        <div id="Ph_c_R_L">
+                            <p class="Ph_p">
+                                <a href="#">推动区域经济一体化的国际经验<br></a>
+                                <a href="#">"中国威胁"的老调弹不响了：青山遮不住 毕竟东流去</a><br>
+                                <a href="#">"毒瘤"壮大、阶层裂变、政府失能......愤怒的美国靠什么自愈？</a><br>
+                                <a href="#">"阿拉伯之春"后的十年寒冬</a><br>
+                                <a href="#">抓紧RCEP机遇 塑造新发展格局</a><br>
+                                <a href="#">炮制罪名乱疆反华注定不能得逞</a><br>
+                                <a href="#">数字贸易：重塑全球价值链的关键力量</a><br>
+                                <a href="#">发展数字经济 助推全球经济复苏</a>
+                            </p>
+                        </div>
+                        <div id="Ph_c_R_R">
+                            <p class="Ph_p">
+                                <a href="#">2020-12-23<br></a> <a href="#">2020-12-22</a>
+                                <br> <a href="#">2020-12-21</a>
+                                <br> <a href="#">2020-12-18</a>
+                                <br> <a href="#">2020-12-17</a>
+                                <br> <a href="#">2020-12-16</a>
+                                <br> <a href="#">2020-12-16</a>
+                                <br> <a href="#">2020-12-14</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="Ph_f">
+                    <a href="#">
+                        <div class="Ph_f_i">
+                            <img style="width: 242px;height: 175px;" src="imgs/Ph_f_i1.png">
+                            <p class="Ph_f_p">新闻馆</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="Ph_f_i">
+                            <img style="width: 242px;height: 175px;" src="imgs/Ph_f_i2.jpg">
+                            <p class="Ph_f_p">博物馆</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="Ph_f_i">
+                            <img style="width: 242px;height: 175px;" src="imgs/Ph_f_i3.jpg">
+                            <p class="Ph_f_p">国情馆</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="Ph_f_i">
+                            <img style="width: 242px;height: 175px;" src="imgs/Ph_f_i4.png">
+                            <p class="Ph_f_p">文明馆</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="yesok4">
+            <div id="Pt">
+                <a href="#">
+                    <div id="Pt_h">
+                        <img src="imgs/ziyuan.png">
+                    </div>
+                </a>
+
+                <div id="Pt_t">
+                    <a href="#">
+                        <div class="Pt_t1 FL"><img class="img1" src="imgs/1_1.jpg" /><br>全国图书馆 </div>
+                    </a>
+                    <a href="#">
+                        <div class="Pt_t1 FL"><img class="img1" src="imgs/1_2.jpg" /><br>全国博物馆</div>
+                    </a>
+                    <a href="#">
+                        <div class="Pt_t1 FL"><img class="img2" src="imgs/1_3.jpg" /><br>中国国家博物馆</div>
+                    </a>
+                    <a href="#">
+                        <div class="Pt_t1 FL"><img class="img2" src="imgs/1_4.jpg" /><br>中国国家图书馆</div>
+                    </a>
+                    <a href="#">
+                        <div class="Pt_t1 FL"><img class="img3" src="imgs/1_5.jpg" /><br>国家大剧院</div>
+                    </a>
+                    <a href="#">
+                        <div class="Pt_t11 FL"><img class="img3" src="imgs/1_6.png" /><br>故宫博物馆</div>
+                    </a>
+                    <a href="#">
+                        <div class="Pt_t2 FL"><img class="img2" src="imgs/2_1.jpg" /><br>敦煌研究社</div>
+                    </a>
+                    <a href="#">
+                        <div class="Pt_t2 FL"><img class="img2" src="imgs/2_2.jpg" /><br>中国美术馆</div>
+                    </a>
+                    <a href="#">
+                        <div class="Pt_t2 FL"><img class="img1" src="imgs/2_3.jpg" /><br>中国出版集团强国版</div>
+                    </a>
+                    <a href="#">
+                        <div class="Pt_t2 FL"><img class="img2" src="imgs/2_4.jpg" /><br>人民出版社强国版</div>
+                    </a>
+                    <a href="#">
+                        <div class="Pt_t2 FL"><img class="img1" src="imgs/2_5.jpg" /><br>中国国家图书馆强国版</div>
+                    </a>
+                    <a href="#">
+                        <div class="Pt_t12 FL"><img class="img2" src="imgs/2_6.jpg" /><br>学习出版社强国版</div>
+                    </a>
+                    <a href="#">
+                        <div class="Pt_t2 FL"><img class="img2" src="imgs/3_1.jpg" /><br>五洲传播出版社强国版</div>
+                    </a>
+                    <a href="#">
+                        <div class="Pt_t2 FL"><img class="img2" src="imgs/3_2.jpg" /><br>人民文学出版社强国版</div>
+                    </a>
+                    <a href="#">
+                        <div class="Pt_t2 FL"><img class="img2" src="imgs/3_3.jpg" /><br>中华书局强国版</div>
+                    </a>
+                    <a href="#">
+                        <div class="Pt_t2 FL"><img class="img2" src="imgs/3_4.jpg" /><br>三联书店强国版</div>
+                    </a>
+                    <a href="#">
+                        <div class="Pt_t2 FL"><img class="img2" src="imgs/3_5.jpg" /><br>龙源期刊强国版</div>
+                    </a>
+                    <a href="#">
+                        <div class="Pt_t12 FL"><img class="img1" src="imgs/3_6.jpg" /><br>作家出版社强国版</div>
+                    </a>
+                    <a href="#">
+                        <div class="Pt_t2 FL"><img class="img1" src="imgs/4_1.jpg" /><br>新华书店强国版</div>
+                    </a>
+                    <a href="#">
+                        <div class="Pt_t2 FL"><img class="img1" src="imgs/4_2.png" /><br>天地出版社强国版</div>
+                    </a>
+                    <a href="#">
+                        <div class="Pt_t2 FL"><img class="img1" src="imgs/4_3.jpg" /><br>中国摄影出版社强国版</div>
+                    </a>
+                    <a href="#">
+                        <div class="Pt_t2 FL"><img class="img1" src="imgs/4_4.png" /><br>外研社强国版</div>
+                    </a>
+                    <a href="#">
+                        <div class="Pt_t2 FL"><img class="img2" src="imgs/4_5.png" /><br>视觉中国强国版</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="yesok5">
+            <div id="Pe">
+                <div id="Pe_h">
+                    <a href="#">
+                        <div class="Pe_h_1">
+                            <img src="imgs/quanshu.png" />
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="Pe_h_1">
+                            <img style="padding-top: 25px;" src="imgs/shufang.png" />
+                        </div>
+                    </a>
+                </div>
+                <div id="Pe_s">
+                    <a href="#"><img style="margin-left: 396px;" src="imgs/xin.png"></a>
+                </div>
+                <div id="Pe_shujia">
+                    <div id="Pe_shu">
+                        <a href="#">
+                            <div class="shu1">
+                                <p class="shuming">马列经典著作选读</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="shu1">
+                                <p class="shuming">毛泽东文集第一卷</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="shu1">
+                                <p class="shuming">邓小平文选第一卷</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="shu1">
+                                <p class="shuming">江泽民文选第一卷</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="shu2">
+                                <p class="shuming">胡锦涛文选第一卷</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="shu2">
+                                <p class="shuming">习近平谈治国理政第一卷</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="shu2">
+                                <p class="shuming">资本论导读</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="shu2">
+                                <p class="shuming">和平发展大国的责任</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="shu3">
+                                <p class="shuming">史学概论</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="shu3">
+                                <p class="shuming">诗经</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="shu3">
+                                <p class="shuming">论语</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="shu3">
+                                <p class="shuming">唐诗三百首</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="shu4">
+                                <p class="shuming">鲁迅散文</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="shu4">
+                                <p class="shuming">莎士比亚悲剧五种</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="shu4">
+                                <p class="shuming">孙子兵法</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="shu4">
+                                <p class="shuming">本草纲目</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="shu5">
+                                <p class="shuming">梦溪笔谈</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="shu5">
+                                <p class="shuming">中国航空工业大事记</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="shu5">
+                                <p class="shuming">中国的包容性创新</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="shu5">
+                                <p class="shuming">这里是中国</p>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="links">
+            <div class="links-left">友情链接</div>
+            <div class="links-right"><a data-locations="0" href="http://www.people.com.cn/">人民网</a><a data-locations="1"
+                    href="http://www.xinhuanet.com/">新华网</a><a data-locations="2"
+                    href="http://www.china.com.cn/">中国网</a><a data-locations="3" href="http://www.cctv.com/">央视网</a><a
+                    data-locations="4" href="http://www.cri.cn/">国际在线</a><a data-locations="5"
+                    href="http://cn.chinadaily.com.cn/">中国日报网</a><a data-locations="6"
+                    href="http://www.youth.cn/">中国青年网</a><a data-locations="7" href="http://www.ce.cn/">中国经济网</a><a
+                    data-locations="8" href="http://www.chinanews.com/">中国新闻网</a><a data-locations="9"
+                    href="http://www.gmw.cn/">光明网</a><a data-locations="10" href="http://www.cnr.cn/">央广网</a><a
+                    data-locations="11" href="http://www.workercn.cn/">中工网</a><a data-locations="12"
+                    href="http://www.dangjian.cn/">党建网</a><a data-locations="13" href="http://www.cyol.com/">中青在线</a><a
+                    data-locations="14" href="http://www.81.cn/">中国军网</a><a data-locations="15"
+                    href="http://www.legaldaily.com.cn/">法制网</a><a data-locations="16"
+                    href="http://www.qstheory.cn/">求是网</a><a data-locations="17"
+                    href="http://www.cac.gov.cn/">中国网信网</a><a data-locations="18"
+                    href="http://www.wenming.cn/">中国文明网</a><a data-locations="19" href="http://www.gov.cn/">中国政府网</a><a
+                    data-locations="20" href="http://www.moe.gov.cn/">教育部网站</a><a data-locations="21"
+                    href="http://www.mod.gov.cn/">国防部网站</a><a data-locations="22"
+                    href="http://www.mct.gov.cn/">文化和旅游部网站</a><a data-locations="23"
+                    href="http://www.scio.gov.cn/index.htm">国新办网站</a><a data-locations="24"
+                    href="http://www.shdf.gov.cn/">中国扫黄打非网</a><a data-locations="25"
+                    href="http://www.womenvoice.cn">女性之声</a><a data-locations="26"
+                    href="http://www.cnpiw.cn/index.html">中国报业</a><a data-locations="27"
+                    href="http://www.12377.cn/">中央网信办举报中心</a><a data-locations="28"
+                    href="http://www.qianlong.com/">千龙网</a><a data-locations="29"
+                    href="http://www.cssn.cn/">中国社会科学网</a><a data-locations="30"
+                    href="http://www.stdaily.com/">中国科技网</a><a data-locations="31"
+                    href="http://www.farmer.com.cn/">中国农业新闻网</a><a data-locations="32"
+                    href="https://www.1958xy.com/">西影网</a><a data-locations="33"
+                    href="http://www.12348.gov.cn/">中国法律服务网</a><a data-locations="34"
+                    href="http://www.legalinfo.gov.cn/">中国普法网</a><a data-locations="35"
+                    href="http://www.tibet.cn/">中国西藏网</a><a data-locations="36"
+                    href="http://www.cnwomen.com.cn/">中国妇女网</a>
+                <a data-locations="37" href="http://www.jxufe.cn/">江西财经大学</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="icon-wrap"><a class="img icon01"
+                    href="http://bszs.conac.cn/sitename?method=show&amp;id=7CA3343B3491BC2DE05310291AAC35E2"
+                    rel="noopener noreferrer" data-target="党政机关"></a><a class="img icon02"
+                    href="https://www.xuexi.cn/968c301a366c4031ec408a42d7644fa3/e43e220633a65f9b6d8b53712cba9caa.html"
+                    rel="noopener noreferrer" data-target="版权申明"></a></div>
+            <p>服务电话：12361　值班电话：010-55624303、010-55624311</p>
+            <p>中共中央宣传部宣传舆情研究中心版权所有　未经书面授权禁止使用</p>
+            <p>Copyright© 2018-2020 by www.xuexi.cn. all rights reserved</p>
+            <p>ICP备案/许可证编号：<a class="text-link" href="http://beian.miit.gov.cn/" rel="noopener noreferrer"
+                    data-target="备案链接">京ICP备18000311</a> 京公网安备11040102700063号</p>
+            <p class="tips">字体支持：北京北大方正电子有限公司　北京汉仪科印信息技术有限公司　北京华康信息技术有限公司</p>
+        </div>
+    </div>
+
+    <!-- 引用jQuery,以下代码来源于第三方博客 -->
+    <script src="js/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".mm1").click(function () {
+                $(".aa").slideToggle();
+            });
+        });
+    </script>
+    <script>
+        var imgCount = 6;
+        var index = 1;
+        var intervalId;
+        var buttonSpan = $('.pointer')[0].children;
+        autoNextPage();
+        function autoNextPage() {
+            intervalId = setInterval(function () {
+                nextPage(true);
+            }, 4440);
+        }
+        $('.img').mouseover(function () {
+            console.log('hah');
+            clearInterval(intervalId);
+        });
+        $('.img').mouseout(function () {
+            autoNextPage();
+        });
+        $('.left').click(function () {
+            nextPage(true);
+        });
+        $('.right').click(function () {
+            nextPage(false);
+        });
+        clickButtons();
+        function clickButtons() {
+            var length = buttonSpan.length;
+            for (var i = 0; i < length; i++) {
+                buttonSpan[i].onclick = function () {
+                    $(buttonSpan[index - 1]).removeClass('on');
+                    if ($(this).attr('index') == 1) {
+                        index = 6;
+                    } else {
+                        index = $(this).attr('index') - 1;
+                    }
+                    nextPage(true);
+                };
+            }
+        }
+        function nextPage(next) {
+            var targetLeft = 0;
+            $(buttonSpan[index - 1]).removeClass('on');
+            if (next) {
+                if (index == 6) {
+                    targetLeft = 0;
+                    index = 1;
+                } else {
+                    index++;
+                    targetLeft = -740 * (index - 1);
+                }
+            } else {
+                if (index == 1) {
+                    index = 6;
+                    targetLeft = -740 * (imgCount - 1);
+                } else {
+                    index--;
+                    targetLeft = -740 * (index - 1);
+                }
+            }
+            $('.list').animate({ left: targetLeft + 'px' });
+            $(buttonSpan[index - 1]).addClass('on');
+        }
+    </script>
+</body>
+
+</html>

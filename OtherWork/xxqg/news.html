@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>学习强国</title>
+    <title>学习强国-资讯速览</title>
 </head>
 <link rel="shortcut icon" href="imgs/favicon.ico " />
 <style>
@@ -20,7 +20,6 @@
 
     body {
         min-width: 1024px;
-        background-color: #f3e7d8;
     }
 
     li {
@@ -172,7 +171,7 @@
 
     .banner {
         width: 100%;
-        height: 177px;
+        height: 200px;
     }
 
     .top {
@@ -213,13 +212,13 @@
 
     .nav {
         width: 100%;
-        height: 77px;
-        background-color: #cc0000;
+        height: 100px;
+        background-color: #c00;
     }
 
     .menu {
-        width: 875px;
-        height: 100%;
+        width: 1000px;
+        height: 77px;
         margin: auto;
         border-radius: 24px;
         background-color: #ce3333;
@@ -229,7 +228,7 @@
         float: left;
         width: 720px;
         height: 65px;
-        padding: 6px 15px;
+        padding: 6px 62px;
     }
 
     .menu .menu-row {
@@ -283,293 +282,205 @@
         background-image: url(imgs/4bf8210cc871017678ac449005e5d44e.png);
     }
 
-    .box1 {
-        height: 510px;
-        /* background-color: lightblue; */
-        background: #ce0000 url(imgs/63d6036d8b95a7b7e9275bde4b494afc.jpg) no-repeat center top;
-    }
-
-    .box1 .main {
-        width: 1000px;
+    .container>.title {
+        width: 980px;
+        height: 90px;
         margin: auto;
-    }
-
-    .box1 .title {
-        width: 1000px;
-        height: 67px;
-        margin: auto;
-    }
-
-    .box1 .title .h1 {
-        display: block;
-        padding: 3px 0;
-        text-align: center;
-        /* color: rgb(208, 2, 27); */
-        color: white;
+        border-bottom: 1px dashed #c00;
+        line-height: 80px;
+        font-size: 24px;
         /* font-family: '华文中宋'; */
-        font-size: 32px;
-        letter-spacing: 0px;
-        font-weight: 900;
+        color: #c00;
     }
 
-    #f {
-        margin-left: 170px;
+    .box3 {
+        width: 1000px;
+        height: 1650px;
+        margin: auto;
     }
 
-    .box1 .title .h2 {
-        display: flex;
+    .box3 .p {
         float: left;
-        /* color: rgb(0, 0, 0); */
-        padding: 3px 3px;
-        color: white;
+        width: 650px;
+        height: 100%;
+    }
+
+    .box3 .news {
+        width: 1000px;
+        height: 350px;
+        margin: 10px 8px;
+    }
+
+    .box3 .news .p .title {
+        height: 49px;
+    }
+
+    .box3 .news .p .title a {
+        font-size: 28px;
         font-family: '华文中宋';
-        font-size: 15px;
-        letter-spacing: 0px;
-        font-weight: normal;
+        font-weight: 900;
+        color: rgb(208, 2, 27);
     }
 
-    .box1 .title .h2:hover {
-        color: rgb(255, 208, 199);
+    .box3 .news .p .text {
+        height: 250px;
+        padding: 25px 0;
     }
 
-    .box1 .title .moreurl {
+    .box3 .news .p .text ul li {
         display: block;
         float: left;
-        width: 100px;
-        padding: 3px 8px;
-        /* color: rgb(208, 2, 27); */
-        color: rgb(255, 180, 180);
-        font-size: 15px;
+        width: 325px;
+        height: 35px;
+    }
+
+    .box3 .news .p .text ul li a {
+        color: black;
+    }
+
+    .box3 .news .p .text ul li a:hover {
         font-weight: 700;
-        font-family: '宋体';
+        color: rgb(208, 2, 27);
     }
 
-    .main {
-        width: 1000px;
+    .box3 .news .p hr {
         margin: auto;
-        position: relative;
+        height: 1px;
     }
 
-    .main .img {
-        width: 740px;
-        height: 411px;
-        border-radius: 24px;
-        overflow: hidden;
-        position: relative;
-        margin: 0 auto;
-    }
-
-    .main .list {
-        width: 4440px;
-        height: 411px;
-        position: absolute;
-
-    }
-
-    .main .list>img {
-        float: left;
-        width: 740px;
-        height: 411px;
-    }
-
-    .main .list a {
-        display: block;
-        position: absolute;
-        width: 740px;
-        height: 371px;
-    }
-
-    .main .list .ii {
-        width: 740px;
-        height: 40px;
-        background-color: rgba(0, 0, 0, 0.5);
-        position: absolute;
-        top: 371px;
-        color: white;
-        font-size: 16px;
-        text-indent: 2em;
-        line-height: 40px;
-    }
-
-    .main .pointer {
-        position: absolute;
-        width: 100px;
-        bottom: 10px;
-        right: 10px;
-    }
-
-    .main .pointer>span {
-        cursor: pointer;
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        background: rgba(0, 0, 0, 0.3);
-        border-radius: 50%;
-        border: 1px solid rgba(255, 255, 255, 0.5);
-    }
-
-    .main .pointer .on {
-        background: #ce0000;
-    }
-
-    .main .arrow {
-        position: absolute;
-        text-decoration: none;
-        width: 85px;
-        height: 92px;
-        padding-top: 8px;
-        border-radius: 50%;
-        top: 200px;
-    }
-
-    .main .arrow>img {
-        width: 85px;
-        height: 85px;
-        opacity: 0.5;
-    }
-
-    .main .arrow:hover {
-        background: rgba(0, 0, 0, 0.1)
-    }
-
-    .main .left {
-        padding-left: 15px;
-        right: 20px;
-    }
-
-    .main .right {
-        padding-right: 15px;
-        left: 20px;
-    }
-
-    .box1 .url {
-        display: block;
-        width: 750px;
-        height: 351px;
-    }
-
-    .box1 .img .h {
-        height: 60px;
-        border-radius: 0 0 24px 24px;
-        text-align: center;
-        font-size: 18px;
-        line-height: 60px;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .box2 {
-        height: 730px;
-    }
-
-    .box2 .p {
-        width: 1000px;
-        height: 375px;
-        margin: auto;
-    }
-
-    .box2 .p1,
-    .box2 .p2 {
+    .box3 .img {
         float: left;
         width: 350px;
-        height: 375px;
+        height: 100%;
     }
 
-    .box2 ul {
-        height: 355px;
-        /* background-color: #ff4242; */
-        background: linear-gradient(to bottom, rgb(255, 60, 60) 0%, rgb(255, 60, 60) 50%, #f3e7d8 50%, #f3e7d8 100%);
-        border-radius: 12px;
-        margin: 14px 8px 0 0;
+    .box3 .img1 {
+        margin-left: 10px;
+        width: 150px;
     }
 
-    .box2 li {
-        height: 39px;
-        line-height: 30px;
-        margin-bottom: 5px;
+    .box3 .img2 {
+        width: 340px;
     }
 
-    .box2 .text {
+    .box3 .pic3 {
+        background-image: url(imgs/40f4b583-b72d-44fc-81c2-ce12a5949e70.png);
+    }
+
+    .box3 .study .block {
+        float: left;
+        width: 326px;
+        margin: 5px 7px 0 0;
+        height: 440px;
+    }
+
+    .box3 .study .block .title {
+        display: block;
+        width: 100%;
+        height: 59px;
+    }
+
+    .box3 .study .block .content {
+        width: 90%;
+    }
+
+    .box3 .study .block .img3 {
+        width: 326px;
+    }
+
+    .box3 .study .block a {
         display: block;
         font-size: 16px;
-        color: white;
-        padding: 5px 8px;
+        color: black;
+        width: 100%;
+        height: 35px;
+        line-height: 35px;
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
     }
 
-    .box2 .text:hover {
-        font-size: 17px;
-        color: rgb(255, 231, 226);
+    .box3 .study .block a:hover {
+        font-weight: 700;
+        color: rgb(208, 2, 27);
     }
 
-    .box2 .img {
-        width: 100%;
-        height: 85px;
-        float: left;
-        margin-bottom: 8px;
+    .box3 .study .block .title {
+        line-height: 59px;
+        color: rgb(208, 2, 27);
+        font-family: '华文中宋';
+        font-weight: 900;
+        font-size: 28px;
     }
 
-    .box2 .p3 {
-        float: left;
-        width: 300px;
-        height: 365px;
-        margin-top: 10px;
-        /* background-color: greenyellow; */
+    .box3 .study .block hr {
+        height: 1px;
     }
 
-    .box2 .p3 img {
-        float: left;
-    }
-
-    .box2 .p3 .i1 {
-        width: 300px;
-    }
-
-    .box2 .p3 .i2 {
-        width: 140px;
-        height: 160px;
-    }
-
-    .box2 .p3 #p1,
-    .box2 .p3 #p2 {
-        margin-top: 3px;
-    }
-
-    .box2 .p3 #p1 {
-        border-radius: 12px 12px 0 0;
-    }
-
-    .box2 .p3 #p2 {
-        border-radius: 0 0 12px 12px;
-    }
-
-    .box2 .p3 #p3 {
-        margin-left: 8px;
-        border-right: #ce0000 solid 1px;
-    }
-
-    .box2 .p3 #p5 {
-        border-radius: 12px;
-    }
-
-    #pic .pic {
+    .box3 .study>a {
         display: block;
-        width: 1000px;
-        height: 165px;
-        margin: 15px auto;
+        float: left;
+        width: 490px;
+        margin: 30px 5px 0 0;
+    }
+
+    .box3 .study>a img {
+        width: 100%;
+    }
+
+    .box3 .content2 {
+        float: left;
+        width: 326px;
+        margin: 0 7px 0 0;
+        height: 260px;
+    }
+
+    .box3 .study .content2 .title {
+        height: 60px;
+        text-align: center;
+        line-height: 59px;
+        font-weight: 900;
+        font-size: 28px;
+    }
+
+    .box3 .study .content2 .title a {
+        color: #ce0000;
+    }
+
+    .box3 .study .content2 .img {
+        width: 326px;
+        height: 200px;
+        margin: auto;
+        background-size: cover;
+        background-position: center bottom;
         background-repeat: no-repeat;
     }
 
-    #pic .pic1 {
-        border-radius: 24px 24px 0 0;
-        background-image: url(imgs/6f4dcd7982c24c3a8c5613a9656b9ca6.jpg);
+    .box3 .study .content2 .i1 {
+        background-image: url(imgs/7336e18ee4ba4488bc314671aacde885.jpg);
     }
 
-    #pic .pic2 {
-        border-radius: 0 0 24px 24px;
-        background-image: url(imgs/b8bef2d90f61464fb5a4cc1ced8567ab.jpg);
+    .box3 .study .content2 .i2 {
+        background-image: url(imgs/fecf3c7b9fea4dad9a4de2e74b98f4d8.jpg);
+    }
+
+    .box3 .study .content2 .i3 {
+        background-image: url(imgs/001d38ea34644c068ccf56d5306e2505.jpg);
+    }
+
+    .box3 .study .content2 .url {
+        display: block;
+        width: 326px;
+        height: 160px;
+    }
+
+    .box3 .study .content2 .h {
+        height: 40px;
+        text-align: center;
+        font-size: 13px;
+        line-height: 40px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
     }
 
     .footer {
@@ -608,7 +519,7 @@
         top: 7px;
         bottom: 7px;
         width: 1px;
-        background-color: #ddd;
+        background-color: #DEDEDE;
     }
 
     .footer .links .links-right {
@@ -712,7 +623,7 @@
         <div class="c">服务电话<br>12361<br>值班电话</div>
         <div class="d">010-55624303<br>010-55624311</div>
     </div>
-    <div class="mm mm2"><a href="news.html" target="_blank">资讯速览</a></div>
+    <div class="mm mm2"><a href="news.html" target="_blank">新闻速览</a></div>
     <div class="mm mm3"><a href="study.html" target="_blank">学习天地</a></div>
     <div class="banner" id="top">
         <div class="top">
@@ -759,100 +670,179 @@
         </div>
     </div>
     <div class="container">
-        <section class="box1">
-            <div class="main">
-                <div class="title"><a
-                        href="https://www.xuexi.cn/lgpage/detail/index.html?id=6456253578055981474&item_id=6456253578055981474"
-                        target="_blank" class="h1">中央经济工作会议在北京举行 习近平作重要讲话</a><a href="#" class="h2"
-                        id="f">习近平发表重要讲话</a><a
-                        href="https://www.xuexi.cn/lgpage/detail/index.html?id=6456253578055981474&item_id=6456253578055981474"
-                        target="_blank" class="h2">总结2020年经济工作</a><a href="#" class="h2">分析当前经济形势</a><a
-                        href="https://www.xuexi.cn/lgpage/detail/index.html?id=6456253578055981474&item_id=6456253578055981474"
-                        target="_blank" class="h2">部署2021年经济工作</a><a
-                        href="https://www.xuexi.cn/72ac54163d26d6677a80b8e21a776cfa/9a3668c13f6e303932b5e0e100fc248b.html"
-                        target="_blank" class="moreurl">更多头条</a>
-                </div>
-                <div class="img">
-                    <div class="list" style="left:0px;">
-                        <a
-                            href="https://www.xuexi.cn/lgpage/detail/index.html?id=6456253578055981474&item_id=6456253578055981474"></a>
-                        <div class="ii">中央经济工作会议在北京举行 习近平作重要讲话</div>
-                        <img src="imgs/d24c786c7ee146279341397b2e558d99.jpg" alt="1" />
-                        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=566864851436561744&item_id=566864851436561744"
-                            target="_blank" style="left: 740px;"></a>
-                        <div class="ii" style="left: 740px;">中央军委举行晋升上将军衔警衔仪式 习近平颁发命令状并向晋衔的军官警官表示祝贺</div>
-                        <img src="imgs/704cf80c8f7c493c8d03c5d6e60dbe5c.jpg" alt="2" />
-                        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=1196140911230181953&item_id=1196140911230181953"
-                            target="_blank" style="left: 1480px;"></a>
-                        <div class="ii" style="left: 1480px;">习近平在气候雄心峰会上发表重要讲话</div>
-                        <img src="imgs/056d4a9afccb40a8bb06597a458fbcf7.jpg" alt="3" />
-                        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=18027975966631644205&item_id=18027975966631644205"
-                            target="_blank" style="left: 2220px;"></a>
-                        <div class="ii" style="left: 2220px;">习近平接见全军思想政治教育工作会议代表</div>
-                        <img src="imgs/704cf80c8f7c493c8d03c5d6e60dbe5c.jpg" alt="4" />
-                        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=11399378258184994110&item_id=11399378258184994110"
-                            target="_blank" style="left: 2960px;"></a>
-                        <div class="ii" style="left: 2960px;">习近平向清华大学经济管理学院顾问委员会2020年会议致辞 祝贺委员会成立20周年</div>
-                        <img src="imgs/61b0bf9b3b494061b7c2f87957a54b69.jpg" alt="5" />
-                        <a href="https://www.xuexi.cn/lgpage/detail/index.html?id=1357852568591275610&item_id=1357852568591275610"
-                            target="_blank" style="left: 3700px;"></a>
-                        <div class="ii" style="left: 3700px;">习近平出席二十国集团领导人第十五次峰会第一阶段会议并发表重要讲话</div>
-                        <img src="imgs/ccc6176fa9a94ce6b950c992e537c96e.jpg" alt="6" />
+        <div class="title">
+            <h1>资讯速览</h1>
+        </div>
+        <section class="box3">
+            <div class="news">
+                <div class="p">
+                    <div class="title"><a href="#">重要新闻</a></div>
+                    <hr>
+                    <div class="text">
+                        <ul>
+                            <li><a href="#">王晨会见安哥拉国民议会第一副议长迪亚斯</a></li>
+                            <li><a href="#">刘鹤出席嫦娥五号任务月球样品交接仪式</a></li>
+                            <li><a href="#">郭声琨：积极贡献法治智慧法治力量</a></li>
+                            <li><a href="#">黄坤明出席《辞海》（第七版）出版座谈会</a></li>
+                            <li><a href="#">外交部驳斥中国影响美大选说法：无中生有</a></li>
+                            <li><a href="#">国家发改委:电力需求增长 全力保障电力供应</a></li>
+                            <li><a href="#">国家能源局：多措并举保障电力供应</a></li>
+                            <li><a href="#">工信部：三季度电信服务质量持续改善</a></li>
+                            <li><a href="#">截至12月17日24时新冠肺炎疫情最新情况</a></li>
+                            <li><a href="#">财政部:电子票据与纸质票据有同等法律效力</a></li>
+                            <li><a href="#">自然资源部:生态保护修复工作取得显著成效</a></li>
+                            <li><a href="#">多部门联合发布长江流域生物资源状况公报</a></li>
+                            <li><a href="#">农业农村部：明年将新建高标准农田1亿亩</a></li>
+                            <li><a href="#">商务部：国内汽车市场加快复苏</a></li>
+                            <li><a href="#">文化和旅游部：太极拳、送王船申遗成功</a></li>
+                            <li><a href="#">央行：11月我国债券市场发债4.7万亿元</a></li>
+                        </ul>
                     </div>
-                    <div class="pointer">
-                        <span index="1" class="on"></span>
-                        <span index="2"></span>
-                        <span index="3"></span>
-                        <span index="4"></span>
-                        <span index="5"></span>
-                        <span index="6"></span>
+                </div>
+                <div class="img"><a href="#"><img src="imgs/screenshot-www.xuexi.cn-2020.12.21-10_19_38.png" alt=""
+                            class="img1"></a>
+                    <a href="#"><img src="imgs/screenshot-www.xuexi.cn-2020.12.21-10_20_04.png" alt="" class="img1"></a>
+                    <a href="#"><img src="imgs/screenshot-www.xuexi.cn-2020.12.21-10_23_23.png" alt="" class="img2"
+                            style="border-radius: 12px 12px 0 0;"></a>
+                    <a href="#"><img src="imgs/screenshot-www.xuexi.cn-2020.12.21-10_20_54.png" alt="" class="img2"
+                            style="border-radius: 0 0 12px 12px;"></a>
+                </div>
+            </div><a href="#" class="pic pic3"></a>
+            <div class="study">
+                <div class="block"><a href="#" class="title">学习时评</a>
+                    <hr>
+                    <div class="content">
+                        <ul>
+                            <li><a href="#">大力弘扬探月精神 开启星际探测新征程</a></li>
+                            <li><a href="#">接力人类梦想 开启新的征程</a></li>
+                            <li><a href="#">探月精神将激励中国为人类福祉作出更多贡献</a></li>
+                            <li><a href="#">嫦娥五号映照自立自强创新路</a></li>
+                            <li><a href="#">改革就是要盯住“堵点”“痛点”发力</a></li>
+                            <li><a href="#">对中国投下信任票</a></li>
+                            <li><a href="#">历史是勇敢者创造的</a></li>
+                            <li><a href="#">保护知识产权就是保护创新</a></li>
+                        </ul>
+                    </div><a href="#" style="margin-top: 20px;height: 80px;"><img
+                            src="imgs/f8e0e1bceff31015d963652c430bbe29.jpg" alt="" class="img3"
+                            style="border-radius: 12px 0 0 12px;"></a>
+                </div>
+                <div class="block"><a href="#" class="title">综合新闻</a>
+                    <hr>
+                    <div class="content">
+                        <ul>
+                            <li><a href="#">善用改革开新局——全面贯彻新发展理念的三明探索与实践</a></li>
+                            <li><a href="#">三明市将乐县常口村：“青山绿水是无价之宝”</a></li>
+                            <li><a href="#">嫦娥五号：创造五项“中国首次”44年来再获月球样品</a></li>
+                            <li><a href="#">我国开展第七次全国人口普查事后质量抽查</a></li>
+                            <li><a href="#">前11月查处涉黑涉恶保护伞问题2.96万起</a></li>
+                            <li><a href="#">2020年游戏产业年收入增幅预计超20%</a></li>
+                            <li><a href="#">辽宁大连新增2例新冠肺炎无症状感染者</a></li>
+                            <li><a href="#">全球累计新冠肺炎确诊病例达72851747例</a></li>
+                        </ul>
+                    </div><a href="#" style="margin-top: 20px;height: 80px;"><img
+                            src="imgs/66ce5e0147d5e26c05612a3bec94bfa2.jpg" alt="" class="img3"></a>
+                </div>
+                <div class="block"><a href="#" class="title">中宣部发布</a>
+                    <hr>
+                    <div class="content">
+                        <ul>
+                            <li><a href="#">黄坤明出席《辞海》（第七版）出版座谈会</a></li>
+                            <li><a href="#">2020年"好记者讲好故事"首场巡讲活动启动</a></li>
+                            <li><a href="#">2020"优秀现实题材文学出版工程"入选作品揭晓</a></li>
+                            <li><a href="#">“核心价值观百场讲坛”第105场走进滦平</a></li>
+                            <li><a href="#">中宣部授予张桂梅“时代楷模”称号</a></li>
+                            <li><a href="#">未来城市生活垃圾回收利用率将达到35%以上</a></li>
+                            <li><a href="#">电视剧高质量发展座谈会举办</a></li>
+                            <li><a href="#">中组部中宣部评选公布32名“最美公务员”</a></li>
+                        </ul>
+                    </div><a href="#" style="margin-top: 20px;height: 80px;"><img
+                            src="imgs/fb3eb6bfbca517b9909a2eab716c5caf.jpg" alt="" class="img3"
+                            style="border-radius: 0 12px 12px 0;"></a>
+                </div>
+                <div class="block"><a href="#" class="title">学习实践</a>
+                    <hr>
+                    <div class="content">
+                        <ul>
+                            <li><a href="#">【决战决胜脱贫攻坚】湖北随州邱畈村：香菇扶贫合作社助圆致富梦</a></li>
+                            <li><a href="#">【决战决胜脱贫攻坚】山东东阿：用好“九字诀”抓好产业扶贫项目运营管理</a></li>
+                            <li><a href="#">【决战决胜脱贫攻坚】江苏亭湖：扶贫协作，千里结“亲戚”共奔小康路</a></li>
+                            <li><a href="#">“十三五”期间 云南预计公路总里程超过26.5万公里</a></li>
+                            <li><a href="#">西藏日喀则市桑珠孜区向群众发放无线数字化覆盖接收设备</a></li>
+                            <li><a href="#">江西确定国企改革创新三年行动“路线图”</a></li>
+                            <li><a href="#">天津：住房租赁监管服务平台将上线</a></li>
+                            <li><a href="#">北京通州老槐庄建公园 村民用金点子“随份子”</a></li>
+                            <li><a href="#">山东已建成绿色节能建筑近10亿平方米 多项指标位居全国前列</a></li>
+                            <li><a href="#">新疆兵团十三师：“政策找人”让失业待遇申领服务有温度</a></li>
+                            <li><a href="#">甘肃：“双轮驱动”助力退役军人就业创业</a></li>
+                        </ul>
                     </div>
-                </div><a href="#" rel="external nofollow" rel="external nofollow" class="arrow left"><img
-                        src="imgs/r.svg" alt=""></a>
-                <a href="#" rel="external nofollow" rel="external nofollow" class="arrow right"><img src="imgs/l.svg"
-                        alt=""></a>
+                </div>
+                <div class="block"><a href="#" class="title">县级融媒</a>
+                    <hr>
+                    <div class="content">
+                        <ul>
+                            <li><a href="#">云南昭通市迤那村：文明“星火”点亮乡村“美丽之光”</a></li>
+                            <li><a href="#">河北衡水冀州区：生态红利提升百姓幸福感</a></li>
+                            <li><a href="#">浙江安吉唐舍村：漫山遍野掘“金银” 集体经济发“新枝”</a></li>
+                            <li><a href="#">辽宁营口市站前区：党建领航 打好提升城市基层服务水平“三张牌”</a></li>
+                            <li><a href="#">江苏江阴徐霞客镇：小小党员中心户 撬动基层治理大基石</a></li>
+                            <li><a href="#">河南安阳：建立在留置一线的临时党支部</a></li>
+                            <li><a href="#">江西吉安市吉州区：建设美丽乡村 “颜值”“内涵”双提升</a></li>
+                            <li><a href="#">山东济宁任城区：非遗传承融入新时代文明实践</a></li>
+                            <li><a href="#">内蒙古科左后旗：“乌兰牧骑+”系列志愿服务活动聚民心</a></li>
+                            <li><a href="#">天津北辰区韩家墅村有本文明“三字经”</a></li>
+                            <li><a href="#">安徽肥西：2020年完成“送戏进万村”演出</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="block"><a href="#" class="title">新闻发布厅</a>
+                    <hr>
+                    <div class="content">
+                        <ul>
+                            <li><a href="#">国家卫生健康委员会就健康促进召开“巡礼十三五·迈向全民健康这五年”举行发布会（重庆）</a></li>
+                            <li><a href="#">国新办举行落实五中全会精神壮大高技能人才队伍发布会</a></li>
+                            <li><a href="#">国新办举行探月工程嫦娥五号任务有关情况发布会</a></li>
+                            <li><a href="#">湖南省召开新闻发布会通报涉黑涉恶案件办理情况</a></li>
+                            <li><a href="#">国新办举行落实五中全会精神做好生态保护修复工作发布会</a></li>
+                            <li><a href="#">内蒙古自治区就生态环境保护督察工作开展情况召开新闻发布会</a></li>
+                            <li><a href="#">2020年12月17日外交部发言人汪文斌主持例行记者会</a></li>
+                            <li><a href="#">商务部12月17日例行新闻发布会</a></li>
+                            <li><a href="#">海南省社会保障卡一卡通工作进展情况新闻发布会</a></li>
+                            <li><a href="#">国家发展改革委12月份例行新闻发布会</a></li>
+                            <li><a href="#">商务部有关负责人谈2020年11月份我国消费市场情况</a></li>
+                        </ul>
+                    </div>
+                </div><a href="#"><img src="imgs/419baa27ffe24bb68240d60f6f34f7a2.jpg" alt="" class="img4"
+                        style="border-radius: 12px 0 0 12px;"></a><a href="#"><img
+                        src="imgs/d931e155fc194edcbd71fcc279320859.jpg" alt="" class="img4"
+                        style="border-radius: 0 12px 12px 0;"></a>
+                <div class="content2">
+                    <div class="title"><a href="#">强国征文</a>
+                    </div>
+                    <div class="img i1" style="border-radius: 12px 0 0 12px;">
+                        <a href="#" class="url"></a>
+                        <div class="h" style="border-radius: 0 0 0 12px;">“爱国情·强国志·报国行”主题征文</div>
+                    </div>
+                </div>
+                <div class="content2">
+                    <div class="title"><a href="#">实播平台</a>
+                    </div>
+                    <div class="img i2">
+                        <a href="#" class="url"></a>
+                        <div class="h">“小康生活 文明沈阳”丨大东副食：人间繁华烟火气</div>
+                    </div>
+                </div>
+                <div class="content2">
+                    <div class="title"><a href="#">身边的感动</a>
+                    </div>
+                    <div class="img i3" style="border-radius: 0 12px 12px 0;">
+                        <a href="#" class="url"></a>
+                        <div class="h" style="border-radius: 0 0 12px 0;">江西景德镇：“90后”瓷都时间修复者</div>
+                    </div>
+                </div>
             </div>
-        </section>
-        <section class="box2">
-            <div class="p">
-                <div class="p1">
-                    <ul>
-                        <li><a href="#" class="text">习近平向晋升上将军衔警衔的军官警官颁发命令状并表示祝贺</a></li>
-                        <li><a href="#" class="text">习近平签署命令 发布新修订《军队计量条例》</a></li>
-                        <li><a href="#" class="text">习近平同志《论坚持全面依法治国》主要篇目介绍</a></li>
-                        <li><a href="#" class="text">习近平同坦桑尼亚总统马古富力通电话</a></li>
-                        <li><a href="#"><img src="imgs/743c667f8b3c859de8e7c03d9a549763.jpg" alt="" class="img"></a>
-                        </li>
-                        <li><a href="#"><img src="imgs/bc3eb58f9640182ded4d3f03f24f1d7c.jpg" alt="" class="img"
-                                    style="border-radius: 0 0 12px 12px;"></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="p2">
-                    <ul>
-                        <li><a href="#" class="text">习近平向法国总统马克龙致慰问电</a></li>
-                        <li><a href="#" class="text">习近平同志《论坚持全面依法治国》出版发行</a></li>
-                        <li><a href="#" class="text">习近平同智利总统皮涅拉通电话</a></li>
-                        <li><a href="#" class="text">习近平向人类减贫经验国际论坛致贺信</a></li>
-                        <li><a href="#"><img src="imgs/2bddfe46b9efc18852ccd2d547ab917a.jpg" alt="" class="img"></a>
-                        </li>
-                        <li><a href="#"><img src="imgs/ac06635f85e3f45603633d68e8edc844.jpg" alt="" class="img"
-                                    style="border-radius: 0 0 12px 12px;"></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="p3">
-                    <a href="#"><img src="imgs/1.png" alt="" id="p1" class="i1"></a>
-                    <a href="#"><img src="imgs/2.png" alt="" id="p2" class="i1"></a>
-                    <a href="#"><img src="imgs/3.png" alt="" id="p3" class="i2"></a>
-                    <a href="#"><img src="imgs/4.png" alt="" id="p4" class="i2"></a>
-                    <a href="#"><img src="imgs/5.png" alt="" id="p5" class="i1"></a>
-                </div>
-            </div>
-            <div id="pic"><a href="#" class="pic pic1"></a><a href="#" class="pic pic2"></a></div>
         </section>
     </div>
-
     <div class="footer">
         <div class="links">
             <div class="links-left">友情链接</div>

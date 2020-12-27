@@ -1,11 +1,11 @@
 #### Gitee：https://gitee.com/angelacool/  
 
-> Gitee Page预览：<https://angelacool.gitee.io/pku>  
+> Gitee Page预览：<https://angelacool.gitee.io>  
 
 
-#### Github：https://github.com/angelacooljx  
+#### Github：https://github.com/angelacooljx/pku  
 
-> GitHub Page预览：<https://angelacooljx.github.io>  
+> GitHub Page预览：<https://angelacooljx.github.io/pku>  
 
 
 仿制北大官网首页作业（已完工）  
